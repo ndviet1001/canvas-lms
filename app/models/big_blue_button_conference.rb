@@ -64,7 +64,9 @@ class BigBlueButtonConference < WebConference
       :moderatorPW => settings[:admin_key],
       :logoutURL => (settings[:default_return_url] || "http://www.instructure.com"),
       :record => settings[:record] ? "true" : "false",
-      :welcome => settings[:record] ? t("This conference may be recorded.") : "",
+      # Advertising our platform
+      :welcome => t("ClassOn - NỀN TẢNG DẠY HỌC TRỰC TUYẾN."),
+      # :welcome => settings[:record] ? t("This conference may be recorded.") : "",
       "meta_canvas-recording-ready-user" => recording_ready_user,
       "meta_canvas-recording-ready-url" => recording_ready_url(current_host)
     }) or return nil
