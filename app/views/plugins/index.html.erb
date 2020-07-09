@@ -16,7 +16,7 @@
 # with this program. If not, see <http://www.gnu.org/licenses/>.
 %>
 
-<% provide :page_title do %><%= t :page_title, "Canvas Plugins" %><% end %>
+<% provide :page_title do %><%= t :page_title, "ClassOn Plugins" %><% end %>
 
 <%
   add_crumb t('#crumbs.plugins', "Plugins")
@@ -27,7 +27,7 @@
 </span>
 
 <h2>
-  <%= t :page_title, "Canvas Plugins" %>
+  <%= t :page_title, "ClassOn Plugins" %>
 </h2>
 
 <% if @plugins.any? %>
@@ -68,5 +68,5 @@
     </tbody>
   </table>
 <% else %>
-    <p class="nodata"><%= t :no_plugins, "There are no Canvas plugins installed" %></p>
+    <p class="nodata"><%= t :no_plugins, "There are no ClassOn plugins installed" %></p>
 <% end %>

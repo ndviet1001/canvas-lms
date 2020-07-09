@@ -45,7 +45,7 @@
                            'aria-describedby' => 'change_password_url_description' %>
           <div class="ic-Form-help-text" id="change_password_url_description">
             <%= t(:change_password_url_help,
-                  "Leave blank for default Canvas behavior") %>
+                  "Leave blank for default ClassOn behavior") %>
           </div>
         </div>
         <div class="ic-Form-control">
@@ -56,7 +56,7 @@
                            'aria-describedby' => 'auth_discovery_url_description' %>
           <div class="ic-Form-help-text" id="auth_discovery_url_description">
             <%= t('discovery_url_description', <<-TEXT)
-If a discovery URL is set, Canvas will forward all users to that URL when they need to be authenticated.
+If a discovery URL is set, ClassOn will forward all users to that URL when they need to be authenticated.
 That page will need to then help the user figure out where they need to go to log in.
 If no discovery URL is configured, the first configuration will be used to attempt to authenticate the user.
                 TEXT
@@ -74,7 +74,7 @@ If no discovery URL is configured, the first configuration will be used to attem
             <div class="ic-Form-help-text" id="unknown_user_url_description">
               <%= t(:unknown_user_url_description,
                     "The url to redirect to when an authenticated user is not "\
-                    "found in Canvas.") %>
+                    "found in ClassOn.") %>
             </div>
           </div>
         <% end %>
