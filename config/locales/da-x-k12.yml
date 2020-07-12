@@ -905,7 +905,7 @@ da-x-k12:
       account_reports: 
         default: 
           last_user_access: 
-            text: "Rapporten viser det sidste login for aktive brugere."
+            text: "Rapporten viser det sidste login for aktive brugere. Bemærk, Sidst tilgået opdateres hvert 10. minut. Det er vores nuværende tærskel for at bestemme aktivitet for en given brugersession."
     learning_outcome_assignment_type_csv_parameters: 
       account_reports: 
         samuel_merrit_university: 
@@ -1837,6 +1837,7 @@ da-x-k12:
   allows_teacher_designer_ta_based_roles_to_access_t_d480279: "Gør det muligt for roller, der er baseret på lærer/designer/undervisningsassistent, at få adgang til værktøjet Chat."
   allows_teacher_ta_based_roles_to_access_the_attend_bf5b2a17: "Gør det muligt for roller, der er baseret på lærer/undervisningsassistent, at få adgang til værktøjet Tilstedeværelse."
   allows_teacher_ta_based_roles_to_access_the_attend_bf92234: "Gør det muligt for roller, der er baseret på lærer eller undervisningsassistent, at få adgang til værktøjet Tilstedeværelse."
+  allows_teachers_to_hide_course_sections_from_stude_eb69d87b: "Lader lærere skjule fagsektioner for eleverne på siden Deltagere, når der er mere end en sektion i faget."
   allows_teachers_to_mark_grade_data_to_be_exported__a6bf77cf: "Giver underviserne mulighed for at markere vurderingsoplysninger, som skal eksporteres i bulk til SIS-integrationer."
   allows_teacherta_based_roles_to_access_the_attenda_c452f87b: "Gør det muligt for lærer-baserede roller at få adgang til værktøjet Tilstedeværelse."
   allows_the_duplicating_of_modules_in_canvas_2e15b444: "Tillader duplikering af forløb i Canvas"
@@ -4233,6 +4234,7 @@ da-x-k12:
         login_expiration_minimum: "Sessionens udløb skal være 20 minutter eller større"
         need_integer: "Indtast et heltal for afspilningslistens cache"
         stream_name_required: "Kinesis Stream-navn er påkrævet."
+  canvas_3962b702: Canvas
   canvas_account_id_97b0471f: canvas_account_id
   canvas_alert_anonymous_comment_assignment_title_st_e7df7956: "Canvas-varsling - Anonym kommentar: %{assignment_title}, elev (%{user_id}), %{course_name}."
   canvas_alert_anonymous_comment_student_author_id_f_a525b5eb: "Canvas-varsling - Anonym kommentar: Elev (%{author_id}) til %{assignment_title}, elev (%{user_id}), %{course_name}."
@@ -6271,6 +6273,7 @@ da-x-k12:
         grading_standard_enabled: "Aktiver fagets vurderingsordning"
         hide_distribution_graphs: "Skjul grafer over vurderingsfordeling for elever"
         hide_final_grades: "Skjul samlet antal i elevernes vurderingsoversigt"
+        hide_sections_on_course_users_page: "Skjul sektioner for eleverne på Deltager-siden"
         home_page_announcement_limit: "Antal beskeder vist på hjemmesiden"
         image: Billede
         indexed: "Inkluder dette fag i det offentlige fagindeks"
@@ -7811,6 +7814,7 @@ da-x-k12:
   enable_moderated_grading_bacd20d8: "Aktiver samlet vurdering."
   enable_new_sis_integration_settings_ab6780a4: "Aktivér nye SIS-integration indstillinger"
   enable_notifications_10a4bf44: "Aktiver meddelelser"
+  enable_notifications_for_contextname_b5b4440e: "Aktiver meddelelser for %{contextName}"
   enable_recording_for_this_conference_b8adff6: "Aktivér optagelse af denne konference"
   enable_reregistration_for_lti_2_b2a10444: "Aktiver registrering til LTI 2 igen"
   enable_scope_ac28b832: "Aktiver omfang"
@@ -9784,6 +9788,7 @@ da-x-k12:
   hide_correct_answers_at_2421b0aa: "Skjul korrekte svar ved"
   hide_correct_answers_at_b1a59408: "Skjul korrekte svar ved"
   hide_course_sections_for_course_name_bd1911af: "Skjul fag-sektioner for fag %{name}"
+  hide_course_sections_from_students_b7850d64: "Skjul fagsektioner for eleverne"
   hide_courses_navigation_menu_6f7c4cfd: "Skjul fag-navigationsmenu"
   hide_courses_without_enrollments_6df4dfad: "Skjul fag med tilmeldinger"
   hide_courses_without_students_fc6fc7a0: "Skjul fag uden elever"
@@ -10130,6 +10135,7 @@ da-x-k12:
   in_order_to_complete_the_process_you_will_be_redir_83376e10: "For at fuldende processen omdirigeres du til en login-side, hvor du skal logge på med dit barns brugeroplysninger."
   in_order_to_import_a_large_quantity_of_outcomes_at_c0d587e3: "For at importere et stort antal læringsudbytter på én gang, eller for at opdatere dine eksisterende læringsudbytter, bedes du *følge CSV-formatet*."
   in_product_training_walkthrough_and_tourpoints_for_2e185119: "Træning om produkter og tour-punkter for lærere"
+  in_product_training_walkthrough_and_tourpoints_for_35aebb17: "Træning om produkter og tour-punkter for admins, lærere og elever"
   in_progress_13b9e26f: "i gang"
   in_progress_9d1ce8b9: "I gang"
   inactive_cd40317f: Inaktiv
@@ -10154,6 +10160,7 @@ da-x-k12:
   include_unpublished_courses_7a0e7aab: "Inkluder ikke-offentliggjorte fag"
   includes_a_link_to_speedgrader_in_the_assignment_h_fbe07e2c: "Indeholder et link til SpeedGrader i menuen Opgave-overskrift i vurderingsoversigten."
   includes_grade_values_in_the_admin_grade_reports_a28200da: "Inkluderer vurderingsværdier i rapporterne om admin-vurderinger."
+  includes_outcomes_service_alignments_when_exportin_6c578a35: "Inkluderer tjenestejusteringer for læringsudbytter ved eksport og import af fagindhold"
   includes_rubrics_in_the_course_sidebar_navigation_6dd52682: "Inkluderer vurderingskriterier i fagets sidelinjenavigation"
   incomplete_95612d72: ufuldstændig
   incomplete_da3c2ea2: Ufuldstændig
@@ -13281,6 +13288,7 @@ da-x-k12:
   no_74e9b590: Nej
   no_alignments_are_available_for_this_outcome_7f8346f9: "Der er ingen tilpasninger til dette læringsudbytte."
   no_announcements_280df147: "Ingen beskeder"
+  no_announcements_to_display_fbf9ed1e: "Ingen beskeder at vise"
   no_assignment_group_assigned_8f1cdb9b: "Ingen opgavegruppe tildelt"
   no_assignment_name_adbb215b: "Intet opgavenavn"
   no_assignments_with_that_name_found_1d7be1: "Ingen opgaver med dette navn fundet"
@@ -14101,6 +14109,7 @@ da-x-k12:
   outcomes_import_completed_baff5cb0: "Import af læringsudbytter afsluttet"
   outcomes_import_failed_77efcdf4: "Import af læringsudbytte mislykkedes"
   outcomes_report_8887bd49: Læringsudbytte-rapport
+  outcomes_service_alignment_migration_5b4391ad: "Overførsel af tjenestejustering for læringsudbytter"
   outcomes_tutorial_tray_ebfce995: "Selvstudiumområde for læringsudbytter"
   over_time_bee1a733: "over tid"
   override_3de65b2c: Tilsidesæt
@@ -14342,6 +14351,11 @@ da-x-k12:
         apps_index_endpoint: "Apps indeks slutpunkt"
         base_url: "Grundlæggende URL"
         token: Adgangs-token
+    apple: 
+      description: "Log ind med Apple"
+    apple_settings: 
+      labels: 
+        client_id: Tjeneste-ID
     assignment_freezer: 
       description: "Lås opgaveegenskaber på kopi"
       name: Opgavelåsning
@@ -19418,6 +19432,7 @@ da-x-k12:
   this_assignment_does_not_count_toward_the_final_gr_a5c238e2: "Denne opgave tæller ikke med i den endelige vurdering."
   this_assignment_has_been_excused_87f1dc13: "Denne opgave er blevet fritaget."
   this_assignment_has_no_default_dates_ae314295: "Denne opgave har ingen standarddatoer."
+  this_assignment_has_too_many_dates_to_display_262f555f: "Denne opgave har for mange datoer til at blive vist."
   this_assignment_is_currently_being_moderated_ffd280f2: "Denne opgave bliver for øjeblikket bedømt"
   this_assignment_is_currently_muted_that_means_stud_94d63139: "Denne opgave er tilbageholdt på nuværende tidspunkt. Det betyder, at eleverne ikke kan se deres vurderinger og feedback. Vil du gerne offentliggøre nu?"
   this_assignment_is_dropped_and_will_not_be_conside_35c3e198: "Opgaven blev droppet og tages ikke i betragtning i den samlede beregning"
@@ -21352,6 +21367,9 @@ da-x-k12:
   you_can_t_delete_account_name_because_it_has_cours_a81c57c9: "Du kan ikke slette %{account_name} fordi den indeholder fag"
   you_can_try_to_log_in_again_2b23ef0f: "Du kan prøve at *logge på igen*."
   you_can_use_a_single_16x16_32x32_48x48_ico_file_85da88b5: "Du kan bruge en enkel 16x16, 32x32, 48x48 ico-fil."
+  you_can_view_dismissed_announcements_by_going_to_a_7f6f4f08: |-
+      Du kan se afviste beskeder ved at gå til Konto og vælge Globale
+                  beskeder fra menuen.
   you_can_view_your_grades_based_on_what_if_scores_s_a1aeae72: "Du kan se dine vurderinger baseret på hvad-nu-hvis-resultater, så du ved, hvordan dine vurderinger vil blive påvirket af kommende eller gen-afleverede opgaver. Du kan teste resultater af en opgave, der allerede omfatter et resultat, eller en opgave, der endnu ikke er blevet bedømt."
   you_cannot_assign_to_a_group_outside_of_the_assign_7869eb3b: "Du kan ikke tildele en gruppe uden for opgavens studiegruppe"
   you_cannot_edit_themes_on_this_subaccount_63ceaaf3: "Du kan ikke redigere temaer på denne underkonto."
@@ -21450,6 +21468,9 @@ da-x-k12:
       Du skal oprette en [ny app på Facebook](%{facebook_url}) og aktivere Client OAuth Login
       i Avancerede indstillinger. Du skal konfigurere %{callback_url} som den gyldige OAuth omdirigerings-URI.
       Når du har gemt app'en, skal du notere dig App-id og App-hemmelighed og indtaste dem her.
+  you_will_need_to_create_a_service_id_apple_develop_4e684a7a: |-
+      Du skal oprette et tjeneste-ID [Apple Developer Console](%{apple_url}).
+      Aktivér Log ind med Apple, og tilføj %{callback_url} som retur-URL. Indtast identifikatoren her.
   you_will_need_to_create_a_web_application_in_the_g_43f753ec: |-
       Du skal oprette et webprogram i [Google Developer Console](%{google_url}).
       Du skal tilføje %{callback_url} som omdirigerings-URI.

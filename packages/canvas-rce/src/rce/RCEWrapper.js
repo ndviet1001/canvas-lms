@@ -41,7 +41,6 @@ import KeyboardShortcutModal from './KeyboardShortcutModal'
 import AlertMessageArea from './AlertMessageArea'
 import alertHandler from './alertHandler'
 import {isFileLink, isImageEmbed} from './plugins/shared/ContentSelection'
-import {defaultImageSize} from './plugins/instructure_image/ImageEmbedOptions'
 import {
   VIDEO_SIZE_DEFAULT,
   AUDIO_PLAYER_SIZE
@@ -379,12 +378,11 @@ class RCEWrapper extends React.Component {
       image.src = fileMetaProps.domObject.preview
       width = image.width
       height = image.height
-      if (width > defaultImageSize && image.width > image.height) {
-        width = defaultImageSize
-        height = (image.height * width) / image.width
-      } else if (height > defaultImageSize) {
-        height = defaultImageSize
-        width = (image.width * height) / image.height
+      // we constrain the <img> to max-width: 100%, so scale the size down if necessary
+      const maxWidth = this.iframe.contentDocument.body.clientWidth
+      if (width > maxWidth) {
+        height = Math.round((maxWidth / width) * height)
+        width = maxWidth
       }
       width = `${width}px`
       height = `${height}px`
@@ -428,9 +426,9 @@ class RCEWrapper extends React.Component {
     }
   }
 
-  insertLink(link) {
+  insertLink(link, isNew) {
     const editor = this.mceInstance()
-    const element = contentInsertion.insertLink(editor, link)
+    const element = contentInsertion.insertLink(editor, link, isNew)
     this.contentInserted(element)
   }
 
@@ -527,6 +525,7 @@ class RCEWrapper extends React.Component {
     if (!this.state.focused) {
       this.setState({focused: true})
       Bridge.focusEditor(this)
+      this._forceCloseFloatingToolbar()
       this.props.onFocus && this.props.onFocus(this)
     }
   }
@@ -591,8 +590,6 @@ class RCEWrapper extends React.Component {
   }
 
   handleBlurRCE = event => {
-    this._forceCloseFloatingToolbar()
-
     if (event.relatedTarget === null) {
       // focus might be moving to tinymce
       this.handleBlur(event)
@@ -675,7 +672,6 @@ class RCEWrapper extends React.Component {
     this.getTextarea().style.resize = 'none'
     editor.on('Change', this.doAutoResize)
 
-    editor.on('blur', this._forceCloseFloatingToolbar)
     editor.on('ExecCommand', this._forceCloseFloatingToolbar)
 
     this.announceContextToolbars(editor)
@@ -778,6 +774,7 @@ class RCEWrapper extends React.Component {
         }
       } catch (ex) {
         // log and ignore
+        // eslint-disable-next-line no-console
         console.error('Failed initializing rce autosave', ex)
       }
     }
@@ -931,6 +928,9 @@ class RCEWrapper extends React.Component {
       event.preventDefault()
       event.stopPropagation()
       this.openKBShortcutModal()
+    } else if (event.keyCode === 27) {
+      // ESC
+      this._forceCloseFloatingToolbar()
     }
   }
 
@@ -960,10 +960,7 @@ class RCEWrapper extends React.Component {
 
   wrapOptions(options = {}) {
     const setupCallback = options.setup
-    options.toolbar = options.toolbar || []
-    const lti_tool_dropdown = options.toolbar.some(str => str.includes('lti_tool_dropdown'))
-      ? 'lti_tool_dropdown'
-      : ''
+
     return {
       ...options,
 
@@ -1008,13 +1005,13 @@ class RCEWrapper extends React.Component {
             'underline',
             'forecolor',
             'backcolor',
-            'superscript',
-            'subscript'
+            'inst_subscript',
+            'inst_superscript'
           ]
         },
         {
           name: formatMessage('Alignment and Indentation'),
-          items: ['align', 'bullist', 'outdent', 'indent', 'directionality']
+          items: ['align', 'bullist', 'inst_indent', 'inst_outdent', 'directionality']
         },
         {
           name: formatMessage('Canvas Plugins'),
@@ -1027,7 +1024,7 @@ class RCEWrapper extends React.Component {
         },
         {
           name: formatMessage('Miscellaneous and Apps'),
-          items: ['removeformat', 'table', 'instructure_equation', `${lti_tool_dropdown}`]
+          items: ['removeformat', 'table', 'instructure_equation', 'lti_tool_dropdown']
         }
       ],
       contextmenu: '', // show the browser's native context menu

@@ -980,7 +980,7 @@ en-CA:
       account_reports: 
         default: 
           last_user_access: 
-            text: "This report shows the last login for active users."
+            text: "This report shows the last login for active users. Please note, Last Access At is updated once every 10 minutes. That is our current threshold to determine activity for any given user session."
     learning_outcome_assignment_type_csv_parameters: 
       account_reports: 
         samuel_merrit_university: 
@@ -1918,6 +1918,7 @@ en-CA:
   allows_teacher_designer_ta_based_roles_to_access_t_d480279: "Allows teacher/designer/TA-based roles to access the Chat tool."
   allows_teacher_ta_based_roles_to_access_the_attend_bf5b2a17: "Allows teacher/TA-based roles to access the Attendance tool."
   allows_teacher_ta_based_roles_to_access_the_attend_bf92234: "Allows teacher, TA-based roles to access the Attendance tool."
+  allows_teachers_to_hide_course_sections_from_stude_eb69d87b: "Allows teachers to hide course sections from students on the People page when there is more than one section in the course."
   allows_teachers_to_mark_grade_data_to_be_exported__a6bf77cf: "Allows teachers to mark grade data to be exported in bulk to SIS integrations."
   allows_teachers_to_specify_post_policies_for_this__9b9433ef: |-
       Allows teachers to specify post policies for this course or specific assignments, enabling grades to be
@@ -4388,6 +4389,7 @@ en-CA:
         login_expiration_minimum: "Session expiration must be 20 minutes or greater"
         need_integer: "Please enter an integer for the play list cache"
         stream_name_required: "The kinesis stream name is required."
+  canvas_3962b702: Canvas
   canvas_account_id_97b0471f: canvas_account_id
   canvas_alert_anonymous_comment_assignment_title_st_e7df7956: "Canvas Alert - Anonymous Comment: %{assignment_title}, Student (%{user_id}), %{course_name}."
   canvas_alert_anonymous_comment_student_author_id_f_a525b5eb: "Canvas Alert - Anonymous Comment: Student (%{author_id}) for %{assignment_title}, Student (%{user_id}), %{course_name}."
@@ -6482,6 +6484,7 @@ en-CA:
         grading_standard_enabled: "Enable course grading scheme"
         hide_distribution_graphs: "Hide grade distribution graphs from students"
         hide_final_grades: "Hide totals in student grades summary"
+        hide_sections_on_course_users_page: "Hide sections on the People page from students"
         home_page_announcement_limit: "Number of announcements shown on the homepage"
         image: Image
         indexed: "Include this course in the public course index"
@@ -8062,6 +8065,7 @@ en-CA:
   enable_moderated_grading_only_relevant_if_the_anon_1dcdc47b: "Enable moderated grading. Only relevant if the Anonymous Moderated Marking flag is enabled."
   enable_new_sis_integration_settings_ab6780a4: "Enable new SIS integration settings"
   enable_notifications_10a4bf44: "Enable Notifications"
+  enable_notifications_for_contextname_b5b4440e: "Enable Notifications for %{contextName}"
   enable_recording_for_this_conference_b8adff6: "Enable recording for this conference"
   enable_reregistration_for_lti_2_b2a10444: "Enable reregistration for LTI 2"
   enable_scope_ac28b832: "Enable scope"
@@ -10092,6 +10096,7 @@ en-CA:
   hide_correct_answers_at_2421b0aa: "Hide Correct Answers at"
   hide_correct_answers_at_b1a59408: "Hide Correct Answers At"
   hide_course_sections_for_course_name_bd1911af: "Hide course sections for course %{name}"
+  hide_course_sections_from_students_b7850d64: "Hide Course Sections from Students"
   hide_courses_navigation_menu_6f7c4cfd: "Hide Courses Navigation Menu"
   hide_courses_without_enrollments_6df4dfad: "Hide courses without enrollments"
   hide_courses_without_students_fc6fc7a0: "Hide courses without students"
@@ -10450,6 +10455,7 @@ en-CA:
   in_order_to_complete_the_process_you_will_be_redir_83376e10: "In order to complete the process you will be redirected to a login page where you will need to log in with your child's credentials."
   in_order_to_import_a_large_quantity_of_outcomes_at_c0d587e3: "In order to import a large quantity of Outcomes at once, or to update your existing outcomes, please *follow the CSV format*."
   in_product_training_walkthrough_and_tourpoints_for_2e185119: "In-product training walkthrough and tourpoints for teachers"
+  in_product_training_walkthrough_and_tourpoints_for_35aebb17: "In-product training walkthrough and tourpoints for admins, teachers, and students"
   in_progress_13b9e26f: in-progress
   in_progress_9d1ce8b9: "In Progress"
   inactive_cd40317f: inactive
@@ -10474,6 +10480,7 @@ en-CA:
   include_unpublished_courses_7a0e7aab: "Include Unpublished Courses"
   includes_a_link_to_speedgrader_in_the_assignment_h_fbe07e2c: "Includes a link to SpeedGrader in the assignment header menu in Gradebook."
   includes_grade_values_in_the_admin_grade_reports_a28200da: "Includes grade values in the admin grade reports."
+  includes_outcomes_service_alignments_when_exportin_6c578a35: "Includes Outcomes Service alignments when exporting and importing course content"
   includes_rubrics_in_the_course_sidebar_navigation_6dd52682: "Includes rubrics in the course sidebar navigation"
   incomplete_95612d72: incomplete
   incomplete_da3c2ea2: Incomplete
@@ -13661,6 +13668,7 @@ en-CA:
   no_74e9b590: "no"
   no_alignments_are_available_for_this_outcome_7f8346f9: "No alignments are available for this outcome."
   no_announcements_280df147: "No Announcements"
+  no_announcements_to_display_fbf9ed1e: "No announcements to display"
   no_assignment_group_assigned_8f1cdb9b: "No Assignment Group Assigned"
   no_assignment_name_adbb215b: "No Assignment Name"
   no_assignments_with_that_name_found_1d7be1: "No assignments with that name found"
@@ -14499,6 +14507,7 @@ en-CA:
   outcomes_import_completed_baff5cb0: "Outcomes Import Completed"
   outcomes_import_failed_77efcdf4: "Outcomes Import Failed"
   outcomes_report_8887bd49: "Outcomes Report"
+  outcomes_service_alignment_migration_5b4391ad: "Outcomes Service Alignment Migration"
   outcomes_tutorial_tray_ebfce995: "Outcomes Tutorial Tray"
   over_time_bee1a733: "over time"
   override_3de65b2c: Override
@@ -14756,6 +14765,11 @@ en-CA:
         apps_index_endpoint: "Apps Index Endpoint"
         base_url: "Base URL"
         token: "Access Token"
+    apple: 
+      description: "Sign in With Apple"
+    apple_settings: 
+      labels: 
+        client_id: "Service ID"
     assignment_freezer: 
       description: "Freeze Assignment Properties on Copy"
       name: "Assignment Property Freezer"
@@ -19969,6 +19983,7 @@ en-CA:
   this_assignment_has_been_excused_87f1dc13: "This assignment has been excused."
   this_assignment_has_no_default_dates_ae314295: "This assignment has no default dates."
   this_assignment_has_no_points_possible_and_cannot__b0b4f829: "This assignment has no points possible and cannot be included in grade calculation"
+  this_assignment_has_too_many_dates_to_display_262f555f: "This assignment has too many dates to display."
   this_assignment_is_currently_being_moderated_ffd280f2: "This assignment is currently being moderated"
   this_assignment_is_currently_muted_that_means_stud_94d63139: "This assignment is currently muted. That means students can't see their grades and feedback. Would you like to unmute now?"
   this_assignment_is_dropped_and_will_not_be_conside_35c3e198: "This assignment is dropped and will not be considered in the total calculation"
@@ -21966,6 +21981,9 @@ en-CA:
   you_can_try_to_log_in_again_2b23ef0f: "You can try to *log in again*."
   you_can_update_some_of_this_user_s_information_but_8e99a045: "You can update some of this user's information, but they can change it back if they choose."
   you_can_use_a_single_16x16_32x32_48x48_ico_file_85da88b5: "You can use a single 16x16, 32x32, 48x48 ico file."
+  you_can_view_dismissed_announcements_by_going_to_a_7f6f4f08: |-
+      You can view dismissed announcements by going to Account and selecting Global
+                  Announcements from the menu.
   you_can_view_your_grades_based_on_what_if_scores_s_a1aeae72: "You can view your grades based on What-If scores so that you know how grades will be affected by upcoming or resubmitted assignments. You can test scores for an assignment that already includes a score, or an assignment that has yet to be graded."
   you_cannot_assign_sections_to_a_group_discussion_t_fec73e05: "You cannot assign sections to a group discussion topic"
   you_cannot_assign_to_a_group_outside_of_the_assign_7869eb3b: "You cannot assign to a group outside of the assignment's group set"
@@ -22066,6 +22084,9 @@ en-CA:
       You will need to create a [new app on Facebook](%{facebook_url}), and enable Client OAuth Login
       in Advanced Settings.  You should configure %{callback_url} as the Valid OAuth redirect URI.
       After you save your app, make a note of the App ID and App Secret, and enter them here.
+  you_will_need_to_create_a_service_id_apple_develop_4e684a7a: |-
+      You will need to create a Service ID [Apple Developer Console](%{apple_url}).
+      Enable Sign in with Apple, and add %{callback_url} as a return URL. Enter the Identifier here.
   you_will_need_to_create_a_web_application_in_the_g_43f753ec: |-
       You will need to create a web application in the [Google Developer Console](%{google_url}).
       You should add %{callback_url} as a redirect URI.

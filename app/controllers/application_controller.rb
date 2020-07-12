@@ -207,7 +207,7 @@ class ApplicationController < ActionController::Base
 
   # put feature checks on Account.site_admin and @domain_root_account that we're loading for every page in here
   # so altogether we can get them faster the vast majority of the time
-  JS_ENV_SITE_ADMIN_FEATURES = [:assignment_bulk_edit_phase_2, :cc_in_rce_video_tray, :featured_help_links].freeze
+  JS_ENV_SITE_ADMIN_FEATURES = [:cc_in_rce_video_tray, :featured_help_links].freeze
   JS_ENV_ROOT_ACCOUNT_FEATURES = [
     :direct_share, :assignment_bulk_edit, :responsive_admin_settings, :responsive_awareness,
     :responsive_misc, :product_tours, :module_dnd, :files_dnd, :unpublished_courses
@@ -1678,7 +1678,7 @@ class ApplicationController < ActionController::Base
   end
 
   def content_tag_redirect(context, tag, error_redirect_symbol, tag_type=nil)
-    url_params = { :module_item_id => tag.id }
+    url_params = tag.tag_type == 'context_module' ? { :module_item_id => tag.id } : {}
     if tag.content_type == 'Assignment'
       redirect_to named_context_url(context, :context_assignment_url, tag.content_id, url_params)
     elsif tag.content_type == 'WikiPage'
@@ -2253,11 +2253,29 @@ class ApplicationController < ActionController::Base
   def js_bundle(*args)
     opts = (args.last.is_a?(Hash) ? args.pop : {})
     Array(args).flatten.each do |bundle|
-      js_bundles << [bundle, opts[:plugin]] unless js_bundles.include? [bundle, opts[:plugin]]
+      js_bundles << [bundle, opts[:plugin], false] unless js_bundles.include? [bundle, opts[:plugin], false]
     end
     nil
   end
   helper_method :js_bundle
+
+  # Like #js_bundle but delay the execution (not necessarily the loading) of the
+  # JS until the DOM is ready. Equivalent to doing:
+  #
+  #     $(document).ready(() => { import('path/to/bundles/profile.js') })
+  #
+  # This is useful when you suspect that the rendering of ERB/HTML can take a
+  # long enough time for the JS to execute before it's done. For example, when
+  # a page would contain a ton of DOM elements to represent DB records without
+  # pagination as seen in USERS-369.
+  def deferred_js_bundle(*args)
+    opts = (args.last.is_a?(Hash) ? args.pop : {})
+    Array(args).flatten.each do |bundle|
+      js_bundles << [bundle, opts[:plugin], true] unless js_bundles.include? [bundle, opts[:plugin], true]
+    end
+    nil
+  end
+  helper_method :deferred_js_bundle
 
   def add_body_class(*args)
     @body_classes ||= []
@@ -2478,6 +2496,7 @@ class ApplicationController < ActionController::Base
     ), id: 'assignment_groups_url')
 
     js_env({
+      :COURSE_ID => @context.id.to_s,
       :URLS => {
         :new_assignment_url => new_polymorphic_url([@context, :assignment]),
         :new_quiz_url => context_url(@context, :context_quizzes_new_url),

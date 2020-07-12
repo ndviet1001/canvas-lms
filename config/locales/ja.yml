@@ -1048,7 +1048,7 @@ ja:
       account_reports: 
         default: 
           last_user_access: 
-            text: このレポートには、アクティブなユーザの最終ログインが表示されます。
+            text: このレポートには、アクティブなユーザの最終ログインが表示されます。最終アクセス時刻は10分ごとに更新されます。これは、特定のユーザーセッションのアクティビティを決定するための現在のしきい値です。
     learning_outcome_assignment_type_csv_parameters: 
       account_reports: 
         samuel_merrit_university: 
@@ -2065,6 +2065,7 @@ ja:
   allows_teacher_designer_ta_based_roles_to_access_t_d480279: 講師/デザイナー/TAベースの役割がチャットツールにアクセスできるようにします。
   allows_teacher_ta_based_roles_to_access_the_attend_bf5b2a17: 講師/TAベースの役割が出席ツールにアクセスできるようにします。
   allows_teacher_ta_based_roles_to_access_the_attend_bf92234: 講師、TAベースの役割が出席ツールにアクセスできるようにします。
+  allows_teachers_to_hide_course_sections_from_stude_eb69d87b: "コースに複数のセクションがある場合、講師は[人々]のページでコースセクションを受講生に表示しないようにすることができます。"
   allows_teachers_to_mark_grade_data_to_be_exported__a6bf77cf: 講師は、一括でSISの統合へエクスポートするため、グレードデータをつけることができます。
   allows_teachers_to_specify_post_policies_for_this__a3ef829d: |-
       講師がこのコースまたは特定の課題に対する投稿方針を指定できるようにして、成績を
@@ -4762,6 +4763,7 @@ ja:
         login_expiration_minimum: "セッションの有効期間は 20 分以上にする必要があります"
         need_integer: "プレイ リスト キャッシュの整数を入力してください"
         stream_name_required: キネシス·ストリーム名が必要です。
+  canvas_3962b702: Canvas
   canvas_account_id_97b0471f: canvas_account_id
   canvas_alert_anonymous_comment_assignment_title_st_e7df7956: "Canvas アラート - 匿名コメント：%{assignment_title}、受講生 (%{user_id})、%{course_name}。"
   canvas_alert_anonymous_comment_student_author_id_f_a525b5eb: "Canvas アラート - 匿名コメント：受講生 (%{author_id}) の%{assignment_title}への、受講生 (%{user_id})、%{course_name}。"
@@ -7142,6 +7144,7 @@ ja:
         grading_standard_enabled: コースの採点スキームを有効にする
         hide_distribution_graphs: 採点分布グラフを受講生に表示しない
         hide_final_grades: 受講生の成績概要で合計を非表示にする
+        hide_sections_on_course_users_page: "[受講生]のページのセクションを受講生に表示しない"
         home_page_announcement_limit: ホームページに掲載されたアナウンス数
         image: 画像
         indexed: "このコースを公開コース インデックスに含める"
@@ -8894,6 +8897,7 @@ ja:
   enable_new_gradebook_history_page_e0fd9d02: 新しい成績表の履歴ページを有効にする。
   enable_new_sis_integration_settings_ab6780a4: "新規 SIS 統合設定を有効化する"
   enable_notifications_10a4bf44: 通知を有効にする
+  enable_notifications_for_contextname_b5b4440e: "%{contextName}の通知を有効にする"
   enable_or_condition_for_modules_a16f02d8: モジュールを有効"または"調整する
   enable_recording_for_this_conference_b8adff6: この会議は録音可能です
   enable_reregistration_for_lti_2_b2a10444: LTI2の登録を有効にする
@@ -11596,6 +11600,7 @@ ja:
   hide_correct_answers_at_2421b0aa: 正解を非表示にする
   hide_correct_answers_at_b1a59408: 正解を非表示にする
   hide_course_sections_for_course_name_bd1911af: "コース用コースセクションを非表示にする%{name}"
+  hide_course_sections_from_students_b7850d64: コースセクションを受講生に表示しない
   hide_courses_menu_1b8ca649: コースメニューを非表示にする
   hide_courses_navigation_menu_6f7c4cfd: コースナビゲーションメニューを非表示にする
   hide_courses_without_enrollments_6df4dfad: 登録者のいないコースを非表示にする
@@ -11980,6 +11985,7 @@ ja:
   in_order_to_complete_the_process_you_will_be_redir_83376e10: プロセスを完了するために、あなたの子供の認証情報でログインする必要があるログインページに、リダイレクトされます。
   in_order_to_import_a_large_quantity_of_outcomes_at_c0d587e3: 一度に大量の成果をインポートする、または既存の成果を更新するには、*CSV形式に従ってください*。
   in_product_training_walkthrough_and_tourpoints_for_2e185119: 講師のための製品内でのトレーニングウォークスルーとツアーポイントです
+  in_product_training_walkthrough_and_tourpoints_for_35aebb17: 管理者、講師、受講生向けの製品内トレーニングのウォークスルー（案内）とツアーポイント
   in_progress_13b9e26f: 進行中
   in_progress_646a8aef: 進行中
   in_progress_9d1ce8b9: 進行中
@@ -12010,6 +12016,7 @@ ja:
   include_unpublished_courses_7a0e7aab: 未公開のコースを含む
   includes_a_link_to_speedgrader_in_the_assignment_h_fbe07e2c: グレードブックの課題ヘッダメニューにSpeedGraderへのリンクを含めます。
   includes_grade_values_in_the_admin_grade_reports_a28200da: 管理者の成績レポートに成績値を含めます。
+  includes_outcomes_service_alignments_when_exportin_6c578a35: コースコンテンツのエクスポートおよびインポート時には、結果サービスの調整を含みます
   includes_rubrics_in_the_course_sidebar_navigation_6dd52682: コースサイドバーナビゲーションに規定を含める
   incomplete_95612d72: 未完了
   incomplete_da3c2ea2: 不完全
@@ -15585,6 +15592,7 @@ ja:
   no_74e9b590: いいえ
   no_alignments_are_available_for_this_outcome_7f8346f9: この結果には位置調整はありません。
   no_announcements_280df147: アナウンスメントなし
+  no_announcements_to_display_fbf9ed1e: 表示する通知なし
   no_assignment_group_assigned_8f1cdb9b: 割り当てられた課題グループなし
   no_assignment_name_adbb215b: 課題名なし
   no_assignments_with_that_name_found_1d7be1: その名前の課題は見つかりませんでした
@@ -16476,6 +16484,7 @@ ja:
   outcomes_import_completed_baff5cb0: 成果のインポートが完了しました
   outcomes_import_failed_77efcdf4: 成果のインポートに失敗しました
   outcomes_report_8887bd49: カスタマーレポート
+  outcomes_service_alignment_migration_5b4391ad: 移行調整サービスの結果
   outcomes_tutorial_tray_ebfce995: 結果チュートリアルトレイ
   over_time_bee1a733: 経時変化
   override_3de65b2c: 上書き
@@ -16744,6 +16753,11 @@ ja:
         apps_index_endpoint: "アプリのインデックス エンドポイント"
         base_url: "ベース URL"
         token: "アクセス トークン"
+    apple: 
+      description: Appleでサインイン
+    apple_settings: 
+      labels: 
+        client_id: サービスID
     assignment_freezer: 
       description: コピーした課題プロパティを凍結
       name: 課題プロパティ凍結機能
@@ -22601,6 +22615,7 @@ ja:
   this_assignment_has_been_excused_87f1dc13: この課題は免除されました
   this_assignment_has_no_default_dates_ae314295: この課題にはデフォルトの日付がありません。
   this_assignment_has_no_points_possible_and_cannot__b0b4f829: この課題には可能な点がなく、成績計算に含めることができません
+  this_assignment_has_too_many_dates_to_display_262f555f: 日付が多すぎるためこの課題は表示できません。
   this_assignment_is_currently_being_moderated_ffd280f2: この課題は、現在モデレートされています
   this_assignment_is_currently_muted_that_means_stud_94d63139: この割課題は現在ミュートされています。つまり、受講者は成績やフィードバックを見ることができません。今すぐミュートを解除しますか？
   this_assignment_is_dropped_and_will_not_be_conside_35c3e198: この課題は削除されました。合計の計算で考慮されません。
@@ -24718,6 +24733,9 @@ ja:
   you_can_try_to_log_in_again_2b23ef0f: "*ログインを再度*行うことができます。"
   you_can_update_some_of_this_user_s_information_but_8e99a045: このユーザの情報を一部更新することはできますが、ユーザの意思により元に戻される可能性もあります。
   you_can_use_a_single_16x16_32x32_48x48_ico_file_85da88b5: "シングル 16x16, 32x32, 48x48の icoファイルを使用することが可能です。"
+  you_can_view_dismissed_announcements_by_going_to_a_7f6f4f08: |-
+      アカウントに移動し、メニューからグローバル
+                  通知を選択すると、却下された通知を表示できます。
   you_can_view_your_grades_based_on_what_if_scores_s_a1aeae72: "今後の課題や再提出された課題の成績がどのように影響を受けるかを知ることができるよう、What-If スコアに基づいて成績を見ることができます。すでにスコアが含まれている課題、またはまだ採点されていない課題のスコアをテストすることができます。"
   you_cannot_assign_sections_to_a_group_discussion_t_fec73e05: セクションをグループディスカッションのトピックに割り当てることはできません
   you_cannot_assign_to_a_group_outside_of_the_assign_7869eb3b: 外部に設定されている課題のグループに割り当てることはできません
@@ -24827,6 +24845,9 @@ ja:
       [Facebookに新しいアプリを](%{facebook_url})を作成する必要があり、詳細設定のClient OAuth Login
       を有効にします。有効なOAuthリダイレクトURIとして、 %{callback_url} を設定する必要があります。
       アプリを保存した後、アプリIDとシークレットをメモし、それらをここに入力します。
+  you_will_need_to_create_a_service_id_apple_develop_4e684a7a: |-
+      サービスIDを作成する必要があります [Apple Developer Console](%{apple_url})。
+      Appleでのサインインを有効にし、%{callback_url}を戻りURLとして追加します。ここに識別子を入力します。
   you_will_need_to_create_a_web_application_in_the_g_43f753ec: |-
       [Googleの開発コンソール](%{google_url})にウェブアプリケーションを作成する必要があります。
       リダイレクトURIとして、%{callback_url} を追加する必要があります。

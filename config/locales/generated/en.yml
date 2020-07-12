@@ -626,8 +626,6 @@ en:
   final_grade_override_be8a21cd: Final Grade Override
   enable_ability_to_alter_the_final_grade_for_the_en_e120f72d: Enable ability to alter the final grade for the entire course without changing scores for assignments.
   k12_description: Update the icons in the Global Navigation Menu that make more sense specifically in a K-12 environment.
-  duplicating_calendar_events_9932cd37: Duplicating Calendar Events
-  allows_the_duplication_of_calendar_events_7bb0d6c5: Allows the duplication of Calendar Events
   duplicate_modules_8ea35557: Duplicate Modules
   allows_the_duplicating_of_modules_in_canvas_2e15b444: Allows the duplicating of modules in ClassOn
   allow_opt_out_of_inbox: Allow users to opt out of the Conversation's Inbox. This will cause all conversation messages and notifications to be sent as ASAP notifications to the user's primary email, hide the Conversation's Inbox unread messages badge on the Inbox, and hide the Conversation's notification preferences.
@@ -769,8 +767,10 @@ en:
   performance_improvements_for_loading_data_into_gra_1c3a0c60: Performance improvements for loading data into Gradebook.
   missing_policy_applicator_emits_live_events_88b47396: Missing Policy Applicator Emits Live Events
   allows_the_missing_policy_applicator_to_emit_submi_338a9bb7: Allows the missing policy applicator to emit submission_updated live events for each submission marked as missing.
+  disable_post_to_sis_for_assignment_in_closed_gradi_921b0271: Disable Post to SIS for Assignment in Closed Grading Periods
+  if_set_turns_off_post_to_sis_functionality_for_ass_2f6398ff: If set, turns off post-to-SIS functionality for assignments when their grading period closes. Only applies if the "Enable new SIS integration settings" feature is enabled.
   product_tours_1e19eb95: Product Tours
-  in_product_training_walkthrough_and_tourpoints_for_2e185119: In-product training walkthrough and tourpoints for teachers
+  in_product_training_walkthrough_and_tourpoints_for_35aebb17: In-product training walkthrough and tourpoints for admins, teachers, and students
   module_file_upload_enhancements_eecd4d37: Module File Upload Enhancements
   drag_and_drop_files_on_modules_and_multi_file_modu_605b469b: Drag and Drop files on modules and multi-file module item uploads
   responsive_admin_settings_4f8670d7: Responsive Admin/Settings
@@ -787,10 +787,6 @@ en:
   allows_users_to_add_conferences_from_the_calendar_f36c5008: Allows users to add conferences from the calendar
   custom_reports_experimental_features_40bbfe7c: 'Custom Reports: Experimental Features'
   use_experimental_features_before_they_are_generall_3dfaddd1: Use experimental features before they are generally enabled in production
-  pronouns_for_users_da46fb5: Pronouns for users
-  allows_users_to_pick_pronouns_that_will_be_display_870b94e0: |-
-    Allows users to pick pronouns that will be displayed after
-    their name when it is shown in the user interface.
   confetti_for_on_time_submissions_394e16ce: Confetti for On-Time Submissions
   displays_confetti_for_users_that_turn_in_an_assign_6899ccef: |-
     Displays confetti for users that turn in an assignment prior
@@ -807,11 +803,6 @@ en:
   allows_teachers_to_hide_course_sections_from_stude_eb69d87b: Allows teachers to hide course sections from students on the People page when there is more than one section in the course.
   mute_notifications_by_course_440e18be: Mute notifications by course
   allows_users_to_mute_notifications_on_a_course_lev_775b0362: Allows users to mute notifications on a course level granularity.
-  immediate_notifications_for_global_announcements_682f5a3d: Immediate notifications for global announcements
-  if_you_turn_this_on_when_an_account_admin_goes_to__42e74f56: |-
-    If you turn this on, when an account admin goes to the page to
-    create a global announcement, a checkbox will appear to send
-    notification directly to users when announcement starts.
   course_level_overrides_for_notification_preference_e86d1725: Course level overrides for notification preferences
   allows_users_to_override_specific_notification_pre_18cf5b9e: |-
     Allows users to override specific notification preferences on a
@@ -838,8 +829,6 @@ en:
   allow_a_teacher_to_set_the_number_of_allowed_attem_19deb51d: Allow a teacher to set the number of allowed attempts on an assignment via the UI
   assignment_bulk_editing_37248ca4: Assignment Bulk Editing
   allow_teachers_to_change_the_dates_on_a_set_of_ass_4d48baec: Allow teachers to change the dates on a set of assignments in one step
-  assignment_bulk_editing_phase_2_fde6f7d3: Assignment Bulk Editing phase 2
-  turns_on_phase_2_features_for_assignment_bulk_edit_20245881: Turns on phase 2 features for Assignment Bulk Editing
   bookmarking_for_enrollments_index_api_840be156: Bookmarking for Enrollments Index API
   use_bookmarking_for_api_pagination_in_enrollments__52b9bc28: Use bookmarking for API pagination in Enrollments Index
   submission_type_lti_placement_b448d5d0: Submission Type LTI Placement
@@ -868,6 +857,8 @@ en:
   allows_learning_outcomes_to_be_selectable_when_mig_acf15555: Allows learning outcomes to be selectable when migrating course content
   restricted_view_for_teachers_in_lmgb_52c78a62: Restricted view for teachers in LMGB
   hides_certain_students_and_sections_in_the_lmgb_if_47097d94: Hides certain students and sections in the LMGB if the teacher only has access to a particular section
+  outcomes_service_alignment_migration_5b4391ad: Outcomes Service Alignment Migration
+  includes_outcomes_service_alignments_when_exportin_6c578a35: Includes Outcomes Service alignments when exporting and importing course content
   system_and_user_generated_events_84bc4c8a: System- and User-Generated Events
   differentiate_between_system_and_user_generated_li_dc466585: |-
     Differentiate between system- and user-generated live events
@@ -901,6 +892,8 @@ en:
   disable_new_quiz_importing_and_migration_checkboxe_3f738b75: Disable New Quiz importing and migration checkboxes, defaulting them to enabled
   send_notifications_when_manually_created_access_to_a1631123: Send notifications when manually created access tokens are made
   granular_permissions_for_managing_wiki_pages_3ed89a84: Granular permissions for managing wiki pages
+  enable_recaptcha_by_default_for_self_registration_af9d50bd: Enable Recaptcha by default for self-registration
+  requires_recaptcha_for_self_registration_by_defaul_c1a9db63: Requires Recaptcha for self-registration by default
   disable_smart_app_banner_on_mobile_devices_bed9bf3b: Disable Smart App Banner on Mobile Devices
   remove_safari_mobile_banner_suggesting_user_downlo_b4251078: Remove Safari mobile banner suggesting user download application from app store.
   global_announcements_a78912c8: Global Announcements
@@ -1422,7 +1415,7 @@ en:
       account_reports:
         default:
           last_user_access:
-            text: This report shows the last login for active users.
+            text: This report shows the last login for active users. Please note, Last Access At is updated once every 10 minutes. That is our current threshold to determine activity for any given user session.
     lti_report_csv_description:
       account_reports:
         default:
@@ -1635,6 +1628,11 @@ en:
               text: Course SIS ID
           parameters:
             note1: Course ID can be left blank to run the report for all courses in the term.
+    lewisville_course_activity_report_csv_parameters:
+      account_reports:
+        default:
+          parameters:
+            header: Term
     mississippi_sis_csv_parameters:
       account_reports:
         default:
@@ -2179,8 +2177,6 @@ en:
       additional_comments: Additional comments
       buttons:
         submit_assignment: Submit Assignment
-      messages:
-        submitting: Submitting...
     syllabus_content:
       titles:
         course_syllabus: Course Syllabus
@@ -4700,6 +4696,8 @@ en:
     uuid_provisioner:
       name: UUID provisioner
       description: This enables exporting UUIDs into Quiz.Next services.
+    apple:
+      description: Sign in With Apple
     clever:
       description: Clever Login
     facebook:
@@ -4784,6 +4782,9 @@ en:
         base_url: Base URL
         apps_index_endpoint: Apps Index Endpoint
         app_reviews_endpoint: App Show Endpoint
+    apple_settings:
+      labels:
+        client_id: Service ID
     assignment_freezer_settings:
       description: |-
         This plugin allows admins to check a property on assignments that makes the configured
@@ -6770,10 +6771,6 @@ en:
   card_view_eaf73185: Card View
   recent_activity_51239235: Recent Activity
   list_view_430aecce: List View
-  smart_alerts_settings:
-    threshold_12h: 12h
-    threshold_24h: 24h
-    threshold_36h: 36h
   canvas_by_instructure_1490381: LMS by ClassOn
   help_with_content_licensing_a146fb0e: Help with content licensing
   help_with_course_visibilities_6b6e22a4: Help with course visibilities
@@ -7123,6 +7120,7 @@ en:
     upload_error_timeout: 'The request timed out: %{url}'
     upload_error_over_quota: 'file size exceeds quota limits: %{bytes} bytes'
     upload_error_unexpected: An unknown error occurred downloading from %{url}
+  login_with_provider_3fd3998e: Login with %{provider}
   authentication_provider:
     default_login_handle_name: Email
     default_delegated_login_handle_name: Login
@@ -11327,6 +11325,7 @@ en:
   additional_sis_sync_assignment_quiz_and_discussion_d941fa5: Additional SIS Sync Assignment, Quiz, and Discussion settings
   require_assignment_due_date_778b200d: Require assignment due date
   limit_assignment_names_lengths_max_255_5ee9ebb5: Limit assignment names lengths (max 255)
+  automatically_disable_post_to_sis_on_assignments_w_dd7e873a: Automatically disable "Post to SIS" on assignments when grading period closes
   sis_grade_export_settings_45a9f709: SIS Grade Export Settings
   sync_grades_to_sis_checkbox_is_enabled_by_default__fad7a785: '"Sync Grades to SIS" checkbox is enabled by default for assignments, graded discussions, and quizzes'
   reported_3de7086a: Reported
@@ -11381,8 +11380,8 @@ en:
   students_can_see_originality_score_797fe634: Students can see originality score
   enabled_web_services_f620b2be: Enabled Web Services
   who_can_create_new_courses_7a6c1338: Who Can Create New Courses
-  smart_alerts_43776718: Smart Alerts
-  threshold_in_hours_to_notify_students_within_f33820aa: Threshold (in hours) to notify students within
+  smart_assignment_alerts_abc2224: Smart Assignment Alerts
+  hours_from_due_date_before_students_are_alerted_6584bae6: Hours (from due date) before students are alerted
   add_account_admins_99c03c9e: Add Account Admins
   add_more_e1ffaa65: Add More
   edit_announcement_title_cce0b4e: Edit announcement %{title}
@@ -11507,10 +11506,14 @@ en:
   are_you_sure_26795d3c: Are you sure?
   deleting_6421031e: deleting...
   save_11a80ec3: Save
+  you_will_need_to_create_a_service_id_apple_develop_4e684a7a: |-
+    You will need to create a Service ID [Apple Developer Console](%{apple_url}).
+    Enable Sign in with Apple, and add %{callback_url} as a return URL. Enter the Identifier here.
   self_registration_156392d6: Self Registration
   disabled_3b1b332a: Disabled
   all_account_types_e83c1516: All Account Types
   observer_accounts_only_30c70a70: Observer Accounts Only
+  require_captcha_for_self_registration_b3b2ea02: Require Captcha for Self Registration
   cas_url_4ba2843e: CAS URL
   you_will_need_to_register_an_application_on_clever_ecdb9faf: |-
     You will need to [register an application on Clever](%{clever_url}).
@@ -12150,7 +12153,6 @@ en:
   need_a_canvas_account_221d18ed: Need a ClassOn Account?
   click_here_it_s_free_eeccb9cb: Click Here, It's Free!
   forgot_password_f0c3fbac: Forgot Password?
-  login_with_provider_3fd3998e: Login with %{provider}
   error_logging_in_error_msg_f61efaa3: 'Error logging in: %{error_msg}'
   create_account_263ec6: Create Account
   log_out_379ba28a: Log Out
@@ -12438,7 +12440,6 @@ en:
   site:
     view_privacy_policy: View Privacy Policy
   please_enter_your_label_name_7745272d: 'Please enter your %{label_name}:'
-  login_with_auth_type_a0aaa52a: Login with *%{auth_type}*
   this_course_cannot_be_added_to_the_courses_menu_at_a3fbb11e: This course cannot be added to the courses menu at this time.
   chat_2153c6b7: Chat
   all_terms_cd27b0fb: All Terms
@@ -12678,11 +12679,6 @@ en:
   create_132b3be1: Create
   edit_your_catalog_account_cce59310: Edit your Catalog Account
   update_4d8ee62: Update
-  wiki_page_cap_minutes_33f17a9: Wiki Page Cap (minutes)
-  discussion_cap_minutes_3d0a3846: Discussion Cap (minutes)
-  quiz_cap_minutes_fa07380: Quiz Cap (minutes)
-  assignment_cap_minutes_d9b0fe22: Assignment Cap (minutes)
-  other_cap_minutes_ad4d1428: Other Cap (minutes)
   user_id_or_sis_id_sis_id_should_be_prepended_with__980ff02b: User ID or SIS ID (SIS ID should be prepended with sis_user_id:)
   include_deleted_enrollments_1c87684a: Include Deleted Enrollments
   this_is_a_report_of_all_students_enrolled_in_a_cou_d0137d3c: |-
@@ -12693,6 +12689,9 @@ en:
   include_unsubmitted_deleted_submissions_99fc2aad: Include Unsubmitted & Deleted Submissions
   enrolled_a6a517cd: Enrolled
   withdrawn_4c838347: Withdrawn
+  current_terms_bcf31fb2: Current Terms
+  course_start_date_on_before_a3a32883: Course Start Date On/Before
+  course_end_date_on_after_a6bbb0b7: Course End Date On/After
   all_configured_apps_a14eef0a: All Configured Apps
   course_implemented_apps_fa658f5a: Course Implemented Apps
   include_unpublished_courses_7a0e7aab: Include Unpublished Courses
@@ -13702,6 +13701,8 @@ en:
     getting_file: Retrieving File...
   button:
     submit_assignment: Submit Assignment
+  uploading_progress_d62bb6e9: Uploading Progress
+  percent_complete_e46b6148: "%{percent}% complete"
   attached_files_must_be_greater_than_0_bytes_7f57bee7: Attached files must be greater than 0 bytes
   selected_filename_7552a8c0: selected %{filename}
   file_tree_expanded_a1d20c4a: File tree expanded
@@ -14795,6 +14796,8 @@ en:
   group_assignments_cannot_be_enabled_for_anonymousl_ed896b1c: Group assignments cannot be enabled for anonymously graded assignments
   peer_reviews_cannot_be_enabled_for_moderated_assig_149d33c4: Peer reviews cannot be enabled for moderated assignments
   group_assignments_cannot_be_enabled_for_moderated__6b2faeef: Group assignments cannot be enabled for moderated assignments
+  points_bceb5005: points
+  students_1b8cd07b: Students
   assignment_d8387b78: assignment
   grader_is_required_62c88f67: Grader is required
   grader_count_is_required_45b6c85b: Grader count is required
@@ -15060,7 +15063,6 @@ en:
   sub_account_daeadd0: Sub-Account
   click_to_sort_by_sub_account_ascending_989b1ab: Click to sort by sub-account ascending
   click_to_sort_by_sub_account_descending_88c611db: Click to sort by sub-account descending
-  students_1b8cd07b: Students
   course_option_links_a79d263d: Course option links
   count_people_successfully_enrolled_into_course_nam_db8eed18:
     one: "%{user_name} successfully enrolled into *%{course_name}*."
@@ -15113,10 +15115,10 @@ en:
   view_user_groups_d2bfa855: View user groups
   content_on_this_page_violates_the_security_policy__25685d8a: Content on this page violates the security policy, contact your admin for assistance.
   canvas_content_security_policy_c3d7bf2b: ClassOn Content Security Policy
-  the_content_security_policy_allows_you_to_restrict_197ca4ff: |-
+  the_content_security_policy_allows_you_to_restrict_eaa7c0d6: |-
     The Content Security Policy allows you to restrict custom
                    JavaScript that runs in your instance of ClassOn. You can manually add
-                   up to %{max_domains} domains to your whitelist. Wild cards are recommended
+                   up to %{max_domains} allowed domains. Wild cards are recommended
                    (e.g. *.classon.edu.vn). ClassOn domains are included
                    automatically and do not count against your 50 domain limit.
   inherit_content_security_policy_94aff861: Inherit Content Security Policy
@@ -15124,28 +15126,27 @@ en:
   blocked_domain_name_b5b93150: Blocked Domain Name
   requested_bbdb5b26: Requested
   last_attempt_7258ebd7: Last Attempt
-  add_to_whitelist_24f3f1ba: Add to Whitelist
+  add_as_allowed_e95540be: Add as Allowed
   no_violations_have_been_reported_977a08d1: No violations have been reported.
   csp_violations_337f8529: CSP Violations
-  success_you_added_hostname_to_the_whitelist_6061236e: 'Success: You added %{hostname} to the whitelist.'
-  add_hostname_to_the_whitelist_c808192e: Add %{hostname} to the whitelist
+  success_you_added_hostname_as_an_allowed_domain_4713bfe8: 'Success: You added %{hostname} as an allowed domain.'
+  add_hostname_as_an_allowed_domain_1f58c38d: Add %{hostname} as an allowed domain
   violation_log_491edd84: Violation Log
-  something_went_wrong_loading_the_violations_try_re_6e2fa92: Something went wrong loading the violations, try reloading the page.
+  something_went_wrong_loading_the_violations_try_re_9461d057: Something went wrong loading the violations. Try reloading the page.
   invalid_domain_e810c1d: Invalid domain
-  whitelist_e88fd8ed: Whitelist
-  whitelist_count_max_26a270f: Whitelist (%{count}/%{max})
+  domains_66feaf7f: Domains
+  domains_count_max_a52b7947: Domains (%{count}/%{max})
   view_violation_log_e80ea322: View Violation Log
-  you_have_reached_the_domain_limit_you_can_add_more_e5ccc070: You have reached the domain limit.  You can add more domains by deleting existing domains in your whitelist.
-  whitelist_editing_is_disabled_when_security_settin_ab40cc90: Whitelist editing is disabled when security settings are inherited from a parent account.
+  you_have_reached_the_domain_limit_you_can_add_more_1143333a: You have reached the domain limit. You can add more domains by deleting existing domains in your allowed list.
+  domain_editing_is_disabled_when_security_settings__3feb6da0: Domain editing is disabled when security settings are inherited from a parent account.
   domain_name_6c783b0: Domain Name
   add_domain_f15bc6c1: Add Domain
-  no_domains_whitelisted_9dfb4960: No domains whitelisted
-  whitelisted_domains_faed9e0c: Whitelisted Domains
-  remove_domain_from_the_whitelist_14c7d5e9: Remove %{domain} from the whitelist
-  whitelisted_tool_domains_7df5e481: Whitelisted Tool Domains
-  the_following_domains_have_automatically_been_adde_2c7a1654: |-
-    The following domains have automatically been added to your
-                     whitelist from tools already existing in your account.
+  no_allowed_domains_b6633d12: No allowed domains
+  allowed_domains_ee7868c8: Allowed Domains
+  remove_domain_as_an_allowed_domain_c510a69e: Remove %{domain} as an allowed domain
+  associated_tool_domains_ba5767c5: Associated Tool Domains
+  the_following_domains_have_automatically_been_allo_cea27372: |-
+    The following domains have automatically been allowed from tools that already exist in your account.
                      To remove these domains, remove the associated tools.
   note_associated_tools_are_only_listed_once_even_if_ebae2aba: |-
     NOTE: Associated tools are only listed once, even if they have
@@ -15356,6 +15357,7 @@ en:
   due_at_5d7d2fa: Due At
   available_from_587ce92f: Available From
   available_until_f3b9c4ed: Available Until
+  this_assignment_has_too_many_dates_to_display_262f555f: This assignment has too many dates to display.
   this_assignment_has_no_default_dates_ae314295: This assignment has no default dates.
   select_assignment_title_4571ffcb: 'Select assignment: %{title}'
   revert_date_changes_5105ce5: Revert date changes
@@ -15911,11 +15913,60 @@ en:
   learn_more_about_collaborations_2978f66d: Learn more about collaborations
   you_have_no_collaboration_apps_configured_talk_to__6733123a: You have no Collaboration apps configured. Talk to your teacher to get some set up.
   getting_started_with_collaborations_794240ba: Getting started with Collaborations
+  collaborations_are_web_based_tools_to_work_collabo_6fa285b6: Collaborations are web-based tools to work collaboratively on tasks like taking notes or grouped papers. Talk to your teacher to get started.
   collaborations_are_web_based_tools_to_work_collabo_6e9f7b3f: Collaborations are web-based tools to work collaboratively on tasks like taking notes or grouped papers. Get started by clicking on the "+ Collaboration" button.
   loading_collaborations_e6c5f262: Loading collaborations
   add_collaboration_da9665ac: Add Collaboration
   collaboration_ce3e2bac: "+ Collaboration"
   loaded_more_collaborations_13f1d630: Loaded More Collaborations.
+  all_items_a49b66c7: All Items
+  other_1c6d9c79: Other
+  moved_assignment_name_to_scoring_range_lower_upper_edd6fc4e: Moved assignment %{name} to scoring range %{lower} - %{upper}
+  move_to_lower_upper_94cb604f: Move to %{lower} - %{upper}
+  assignment_name_options_43b1795: assignment %{name} options
+  loading_1d2ad2d7: Loading..
+  search_assignments_8c3c21bb: Search Assignments
+  filter_assignment_category_63acaed4: Filter Assignment Category
+  item_category_category_icon_for_item_name_item_nam_ff2b97f0: "%{item_category} category icon for item name %{item_name}"
+  no_items_found_870b2d0d: No items found
+  upper_to_lower_168f5fe7: "%{upper} to %{lower}"
+  add_items_into_scoring_range_title_be08104e: Add Items Into %{scoring_range_title}
+  add_items_44913315: Add Items
+  count_items_found_224f86d3:
+    zero: No items found
+    one: One item found
+    other: "%{count} items found"
+  conditional_release:
+    and: "&"
+  or_ef4e808: or
+  splitting_disabled_reached_maximum_of_three_assign_716acb13: 'Splitting disabled: reached maximum of three assignment groups in a scoring range'
+  click_to_split_set_here_9c35462a: Click to split set here
+  click_to_merge_sets_here_638fcac7: Click to merge sets here
+  label_as_gradingtype_ae164bd9: "%{label}, as %{gradingType}"
+  top_bound_282d045b: Top Bound
+  lower_bound_ed528347: Lower Bound
+  division_cutoff_cutoff_value_e938bc9d: Division cutoff %{cutoff_value}
+  sets_are_split_click_to_merge_99552cdb: Sets are split, click to merge
+  sets_are_merged_click_to_split_fa741a5f: Sets are merged, click to split
+  removed_assignment_assignment_name_835cc776: Removed assignment %{assignment_name}
+  assignment_set_set_index_28b1f973: Assignment set %{set_index}
+  scoring_range_upperbound_to_lowerbound_c017669b: Scoring range %{upperBound} to %{lowerBound}
+  add_items_to_score_range_297d413b: Add Items to Score Range
+  percent_448ea947: percent
+  letter_grade_f00fedc4: letter grade
+  gpa_scale_6710e2ee: GPA scale
+  other_ddacb37d: other
+  score_pts_adcb1af3: "%{score} pts"
+  score_points_3c48e2a8: "%{score} points"
+  score_letter_grade_b3bb9e52: "%{score} letter grade"
+  score_percent_11941c81: "%{score} percent"
+  splitting_disabled_there_can_only_be_a_maximum_of__7070ec11: 'Splitting disabled: there can only be a maximum of three assignment groups in a scoring range.'
+  must_not_be_empty_80fd90b8: must not be empty
+  must_be_a_number_f6e09df7: must be a number
+  number_is_too_large_4da4af0a: number is too large
+  number_is_too_small_618a6ca7: number is too small
+  must_provide_valid_letter_grade_999219e3: must provide valid letter grade
+  these_scores_are_out_of_order_4f0859ef: these scores are out of order
   close_details_sidebar_ff8f663d: Close details sidebar
   lowerbound_to_upperbound_352a3c0b: "%{lowerBound}+ to %{upperBound}"
   view_range_student_details_8116d68a: View range student details
@@ -15958,16 +16009,6 @@ en:
     Conferences, powered by BigBlueButton, is unable to handle current demand.  Consider upgrading to
             Premium BigBlueButton or use one of the following video conferencing providers.  Please talk to your local
             admin for additional guidance.
-  canvas_conferences_is_a_free_service_provided_by_b_cc0253e: ClassOn Conferences is a free service provided by BigBlueButton.
-  if_your_institution_is_likely_to_need_more_than_10_297382d: |-
-    If your institution is likely to need more than 10 concurrent Conferences powered by
-              BigBlueButton, we recommend upgrading to Premium BigBlueButton or exploring alternative
-              conferencing solutions ClassOn partners with, such as Zoom, Hangouts, Teams, and other
-              video conferencing tools who are offering free or discounted services.
-  learn_more_7a8d626: Learn More
-  not_all_of_these_services_may_be_supported_by_your_155d9f70: |-
-    Not all of these services may be supported by your institution. Please contact your
-              local admin for more information.
   great_work_from_the_canvas_developers_8c23f1c3: Great work! From the ClassOn developers
   starting_import_operation_f25745f0: Starting import operation
   import_started_successfully_a3467411: Import started successfully
@@ -16228,13 +16269,13 @@ en:
   field_cannot_be_blank_afb5b332: Field cannot be blank.
   missing_required_fields_please_fill_in_all_require_1e10b2e9: Missing required fields. Please fill in all required fields.
   public_jwk_json_is_not_valid_please_submit_properl_31ea2004: Public JWK json is not valid. Please submit properly formatted json.
+  public_jwk_url_b5564c1d: Public JWK URL
   required_values_1eb5841f: Required Values
   title_f8e03596: "* Title"
   description_61f4296: "* Description"
   target_link_uri_bbed67d1: "* Target Link URI"
   openid_connect_initiation_url_d9037d30: "* OpenID Connect Initiation Url"
   jwk_method_6d5d0c84: "* JWK Method"
-  public_jwk_url_b5564c1d: Public JWK URL
   lti_advantage_services_c1746cb4: LTI Advantage Services
   services_must_be_supported_by_the_tool_in_order_to_1f194a36: Services must be supported by the tool in order to work. Check with your Tool Vendor to ensure service capabilities.
   check_services_to_enable_8877c451: Check Services to enable
@@ -17388,7 +17429,7 @@ en:
   game_over_104baa: GAME OVER
   press_space_to_start_over_d4b8a2da: Press 'space' to start over
   contexttype_notification_settings_d72acd58: "%{contextType} Notification Settings"
-  enable_notifications_10a4bf44: Enable Notifications
+  enable_notifications_for_contextname_b5b4440e: Enable Notifications for %{contextName}
   you_are_currently_receiving_notifications_for_this_4f542bb2: You are currently receiving notifications for this %{contextType}. To disable %{contextType} notifications, use the toggle above.
   you_will_not_receive_any_contexttype_notifications_da7a58f1: You will not receive any %{contextType} notifications at this time. To enable %{contextType} notifications, use the toggle above.
   granular_contexttype_notification_settings_will_be_c5dfc901: Granular %{contextType} notification settings will be configurable here in the future.
@@ -17453,6 +17494,11 @@ en:
   please_wait_as_we_upload_and_process_your_file_73c4b5a8: Please wait as we upload and process your file.
   an_outcome_import_is_currently_in_progress_11e6cb38: An outcome import is currently in progress.
   it_s_ok_to_leave_this_page_we_ll_email_you_when_th_2dbed7fa: It's ok to leave this page, we'll email you when the import is done.
+  no_announcements_to_display_fbf9ed1e: No announcements to display
+  you_can_view_dismissed_announcements_by_going_to_a_7f6f4f08: |-
+    You can view dismissed announcements by going to Account and selecting Global
+                Announcements from the menu.
+  recent_f19e8c64: Recent
   count_permissions_found_1a926f7d:
     one: One permission found
     other: "%{count} permissions found"
@@ -18183,12 +18229,6 @@ en:
   error_in_mastery_paths_range_index_7d17ddac: "%{error} in mastery paths range %{index}"
   multiple_ba5220cd: Multiple
   upper_lower_56cad16c: "%{upper} - %{lower}"
-  points_bceb5005: points
-  percent_448ea947: percent
-  letter_grade_f00fedc4: letter grade
-  gpa_scale_6710e2ee: GPA scale
-  other_ddacb37d: other
-  score_pts_adcb1af3: "%{score} pts"
   select_a_course_4710371f: Select a Course
   select_a_module_optional_7edb5cb0: Select a Module (optional)
   starting_copy_operation_cc46d911: Starting copy operation
@@ -18205,7 +18245,6 @@ en:
   place_b128fa94: Place
   position_select_c2dd3980: Position Select
   yyyy_mm_dd_hh_mm_a01b6081: YYYY-MM-DD hh:mm
-  other_1c6d9c79: Other
   wiki_6603e81b: Wiki
   _5a374287: "..."
   load_more_results_460f49a9: Load more results
@@ -18537,8 +18576,9 @@ en:
   failed_to_update_domain_lookup_b2437cf7: Failed to update domain lookup
   update_name_6581781d: Update %{name}
   update_domain_account_lookup_9c89440d: Update Domain Account Lookup
-  assessment_loading_50ce6e70: Assessment Loading
   assessment_failed_to_load_ad238b36: Assessment Failed to Load
+  click_to_launch_assessment_9434b1fd: Click to Launch Assessment
+  assessment_loading_50ce6e70: Assessment Loading
   bulk_migration:
     confirm:
       delete_credential: Are you sure you want to remove these credentials?
@@ -18772,7 +18812,6 @@ en:
       update_assignment_points: Change assignment points to match rubric?
     prompts:
       update_assignment_points: Leaving the assignment's total points at %{assignmentPoints} and the rubric's total points at %{rubricPoints} will result in a maximum possible score of %{toPercentage_pointRatio} for student submissions graded with the rubric.
-  remove_all_group_observer_members_af5675f3: Remove All Group Observer Members
   remove_all_course_observer_members_4622c70d: Remove All Course Observer Members
   pick_the_date_and_time_for_the_following_conferenc_e9f91edd: 'Pick the date and time for the following conference setting:'
   content_import_files_cannot_be_downloaded_after_en_7e3a2099: Content import files cannot be downloaded after %{ENV.CONTENT_MIGRATIONS_EXPIRE_DA} days.

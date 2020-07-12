@@ -17,6 +17,7 @@
  */
 
 import K5Uploader from '@instructure/k5uploader'
+import {isAudioOrVideo, isImage, isVideo} from '../rce/plugins/shared/fileTypeUtils'
 
 /* eslint no-console: 0 */
 export default class Bridge {
@@ -122,7 +123,7 @@ export default class Bridge {
     return false
   }
 
-  insertLink = (link, fromTray = true) => {
+  insertLink = (link, textOverride) => {
     if (this.focusedEditor) {
       const {selection} = this.focusedEditor.props.tinymce.get(this.focusedEditor.props.textareaId)
       link.selectionDetails = {
@@ -132,17 +133,23 @@ export default class Bridge {
       if (!link.text) {
         link.text = link.title || link.href
       }
-      this.focusedEditor.insertLink(link)
-      if (fromTray && this.controller) {
-        this.controller.hideTray()
-      }
+      this.focusedEditor.insertLink(link, textOverride)
+      this.controller?.hideTray()
     } else {
       console.warn('clicked sidebar link without a focused editor')
     }
   }
 
-  insertFileLink = (link, fromTray = true) => {
-    return this.insertLink(link, fromTray)
+  // insertFileLink is called from the FileBrowser when All files is chosen
+  // vs the above insertLink which is called from the other CanvasContentTray panels.
+  insertFileLink = link => {
+    if (isImage(link.content_type)) {
+      return this.insertImage(link)
+    } else if (isAudioOrVideo(link.content_type)) {
+      link.embedded_iframe_url = link.href
+      return this.embedMedia(link)
+    }
+    return this.insertLink(link)
   }
 
   insertImage(image) {
@@ -195,7 +202,7 @@ export default class Bridge {
   }
 
   embedMedia = media => {
-    if (/video/.test(media.type || media.content_type)) {
+    if (isVideo(media.type || media.content_type)) {
       this.insertVideo(media)
     } else {
       this.insertAudio(media)

@@ -108,6 +108,8 @@ class Assignment < ActiveRecord::Base
     dependent: :destroy,
     inverse_of: :assignment
 
+  has_many :conditional_release_associations, class_name: "ConditionalRelease::AssignmentSetAssociation", dependent: :destroy, inverse_of: :assignment
+
   scope :anonymous, -> { where(anonymous_grading: true) }
   scope :moderated, -> { where(moderated_grading: true) }
   scope :auditable, -> { anonymous.or(moderated) }
@@ -154,7 +156,8 @@ class Assignment < ActiveRecord::Base
                 ContextExternalTool.find(attrs['content_id'].to_i)
               end
     attrs[:content] = content if content
-    attrs.slice!(:url, :new_tab, :content)
+    attrs[:external_data] = JSON.parse(attrs[:external_data]) if attrs['external_data'].present?
+    attrs.slice!(:url, :new_tab, :content, :external_data)
     false
   }
   before_validation do |assignment|
@@ -538,6 +541,8 @@ class Assignment < ActiveRecord::Base
               :ensure_manual_posting_if_anonymous,
               :ensure_manual_posting_if_moderated,
               :create_default_post_policy
+
+  after_save  :update_due_date_smart_alerts, if: :update_cached_due_dates?
 
   after_commit :schedule_do_auto_peer_review_job_if_automatic_peer_review
 
@@ -1070,7 +1075,7 @@ class Assignment < ActiveRecord::Base
         resource_link_id: lti_context_id,
         context_external_tool: ContextExternalTool.from_content_tag(external_tool_tag, context)
       )
-      line_items.create!(label: title, score_maximum: points_possible, resource_link: rl)
+      line_items.create!(label: title, score_maximum: points_possible, resource_link: rl, coupled: true)
     elsif saved_change_to_title? || saved_change_to_points_possible?
       line_items.
         find(&:assignment_line_item?)&.
@@ -1209,6 +1214,9 @@ class Assignment < ActiveRecord::Base
 
     each_submission_type { |submission| submission.destroy if submission && !submission.deleted? }
     refresh_course_content_participation_counts
+
+    ScheduledSmartAlert.where(context_type: 'Assignment', context_id: self.id).destroy_all
+    ScheduledSmartAlert.where(context_type: 'AssignmentOverride', context_id: self.assignment_override_ids).destroy_all
   end
 
   def refresh_course_content_participation_counts
@@ -2498,14 +2506,16 @@ class Assignment < ActiveRecord::Base
 
   def current_candidate_set(peer_review_params, current_submission, existing)
     candidate_set = peer_review_params[:submission_ids] - existing.map(&:asset_id)
-    if self.group_category_id && !self.intra_group_peer_reviews
-      # don't assign to our group partners
-      group_ids = peer_review_params[:submissions].select{|s| candidate_set.include?(s.id) && current_submission.group_id == s.group_id}.map(&:id)
-      candidate_set -= group_ids
-    else
-      # don't assign to ourselves
-      candidate_set.delete(current_submission.id)
+    # don't assign to ourselves
+    candidate_set.delete(current_submission.id)
 
+    if self.group_category_id && !self.intra_group_peer_reviews
+      if current_submission.group_id
+        # don't assign to our group partners (assuming we have a group)
+        group_ids = peer_review_params[:submissions].select{|s| candidate_set.include?(s.id) && current_submission.group_id == s.group_id}.map(&:id)
+        candidate_set -= group_ids
+      end
+    else
       if self.discussion_topic? && self.discussion_topic.group_category_id
         # only assign to other members in the group discussion
         child_topic = self.discussion_topic.child_topic_for(current_submission.user)
@@ -2962,6 +2972,22 @@ class Assignment < ActiveRecord::Base
       will_save_change_to_only_visible_to_overrides? ||
       saved_change_to_only_visible_to_overrides? ||
       will_save_change_to_moderated_grading? || saved_change_to_moderated_grading?
+  end
+
+  def update_due_date_smart_alerts
+    unless self.saved_by == :migration
+      if self.due_at.nil? || self.due_at < Time.zone.now
+        ScheduledSmartAlert.find_by(context_type: self.class.name, context_id: self.id, alert_type: :due_date_reminder)&.destroy
+      else
+        ScheduledSmartAlert.upsert(
+          context_type: self.class.name,
+          context_id: self.id,
+          alert_type: :due_date_reminder,
+          due_at: self.due_at,
+          root_account_id: root_account.id
+        )
+      end
+    end
   end
 
   def apply_late_policy
@@ -3428,6 +3454,45 @@ class Assignment < ActiveRecord::Base
     true
   end
 
+  def self.disable_post_to_sis_if_grading_period_closed
+    return unless Account.site_admin.feature_enabled?(:new_sis_integrations)
+
+    eligible_root_accounts = Account.root_accounts.active.select do |account|
+      account.feature_enabled?(:disable_post_to_sis_when_grading_period_closed) &&
+        account.disable_post_to_sis_when_grading_period_closed?
+    end
+    return unless eligible_root_accounts.any?
+
+    # This method is currently set to be called every 5 minutes, but check for
+    # grading periods that have closed within a somewhat larger interval to
+    # avoid "missing" a given period if the periodic job doesn't run for a while.
+    now = Time.zone.now
+    newly_closed_grading_periods = GradingPeriod.active.joins(:grading_period_group).
+      where(close_date: 20.minutes.ago(now)..now).
+      where(grading_period_groups: {root_account: eligible_root_accounts})
+    return unless newly_closed_grading_periods.any?
+
+    earliest_start_date = newly_closed_grading_periods.pluck(:start_date).min
+    latest_end_date = newly_closed_grading_periods.pluck(:end_date).max
+    eligible_courses = Course.where(root_account: eligible_root_accounts)
+
+    due_at_range = earliest_start_date..latest_end_date
+    Assignment.find_ids_in_ranges do |min_id, max_id|
+      possible_assignments_scope = Assignment.active.
+        where(id: min_id..max_id, course: eligible_courses, post_to_sis: true)
+
+      assignment_ids_to_update = possible_assignments_scope.
+        where(due_at: due_at_range).
+        union(possible_assignments_scope.where("EXISTS (?)",
+          AssignmentOverride.active.
+            where("assignment_id = assignments.id").
+            where(set_type: "CourseSection", due_at_overridden: true, due_at: due_at_range))).
+        select(:id)
+
+      Assignment.where(id: assignment_ids_to_update).update_all(post_to_sis: false, updated_at: Time.zone.now)
+    end
+  end
+
   private
 
   def anonymous_grader_identities(index_by:)
@@ -3503,7 +3568,7 @@ class Assignment < ActiveRecord::Base
 
     if AssignmentUtil.due_date_required?(self)
       overrides = gather_override_data(overrides)
-      if overrides.select{|o| o[:due_at].nil? && o[:workflow_state] != 'deleted'}.length > 0
+      if overrides.select{|o| !!o[:due_at_overridden] && o[:due_at].blank? && o[:workflow_state] != 'deleted'}.length > 0
         errors.add(:due_at, I18n.t("cannot be blank for any assignees when Post to Sis is checked"))
         return false
       end
@@ -3513,6 +3578,13 @@ class Assignment < ActiveRecord::Base
 
   def gather_override_data(overrides)
     overrides = overrides.values.reject(&:empty?).flatten if overrides.is_a?(Hash)
+    overrides = overrides.map do |o|
+      o = o.to_unsafe_h if o.is_a?(ActionController::Parameters)
+      if o.is_a?(Hash) && o.has_key?(:due_at) && !o.has_key?(:due_at_overridden)
+        o = o.merge(:due_at_overridden => true) # default to true if provided by api
+      end
+      o
+    end
     override_ids = overrides.map{|ele| ele[:id]}.to_set
     self.assignment_overrides.reject{|o| override_ids.include? o[:id]} + overrides
   end

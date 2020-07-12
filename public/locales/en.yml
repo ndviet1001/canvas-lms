@@ -626,8 +626,6 @@ en:
   final_grade_override_be8a21cd: Final Grade Override
   enable_ability_to_alter_the_final_grade_for_the_en_e120f72d: Enable ability to alter the final grade for the entire course without changing scores for assignments.
   k12_description: Update the icons in the Global Navigation Menu that make more sense specifically in a K-12 environment.
-  duplicating_calendar_events_9932cd37: Duplicating Calendar Events
-  allows_the_duplication_of_calendar_events_7bb0d6c5: Allows the duplication of Calendar Events
   duplicate_modules_8ea35557: Duplicate Modules
   allows_the_duplicating_of_modules_in_canvas_2e15b444: Allows the duplicating of modules in ClassOn
   allow_opt_out_of_inbox: Allow users to opt out of the Conversation's Inbox. This will cause all conversation messages and notifications to be sent as ASAP notifications to the user's primary email, hide the Conversation's Inbox unread messages badge on the Inbox, and hide the Conversation's notification preferences.
@@ -769,12 +767,14 @@ en:
   performance_improvements_for_loading_data_into_gra_1c3a0c60: Performance improvements for loading data into Gradebook.
   missing_policy_applicator_emits_live_events_88b47396: Missing Policy Applicator Emits Live Events
   allows_the_missing_policy_applicator_to_emit_submi_338a9bb7: Allows the missing policy applicator to emit submission_updated live events for each submission marked as missing.
+  disable_post_to_sis_for_assignment_in_closed_gradi_921b0271: Disable Post to SIS for Assignment in Closed Grading Periods
+  if_set_turns_off_post_to_sis_functionality_for_ass_2f6398ff: If set, turns off post-to-SIS functionality for assignments when their grading period closes. Only applies if the "Enable new SIS integration settings" feature is enabled.
   product_tours_1e19eb95: Product Tours
-  in_product_training_walkthrough_and_tourpoints_for_2e185119: In-product training walkthrough and tourpoints for teachers
+  in_product_training_walkthrough_and_tourpoints_for_35aebb17: In-product training walkthrough and tourpoints for admins, teachers, and students
   module_file_upload_enhancements_eecd4d37: Module File Upload Enhancements
   drag_and_drop_files_on_modules_and_multi_file_modu_605b469b: Drag and Drop files on modules and multi-file module item uploads
   responsive_admin_settings_4f8670d7: Responsive Admin/Settings
-  collection_of_responsive_improvements_throughout_c_dedfe6dc: Collection of responsive improvements throughout Canvas
+  collection_of_responsive_improvements_throughout_c_dedfe6dc: Collection of responsive improvements throughout ClassOn
   responsive_awareness_226843a: Responsive Awareness
   responsive_misc_dc572cc0: Responsive Misc
   help_for_unpublished_courses_512a08d7: Help for Unpublished Courses
@@ -787,10 +787,6 @@ en:
   allows_users_to_add_conferences_from_the_calendar_f36c5008: Allows users to add conferences from the calendar
   custom_reports_experimental_features_40bbfe7c: 'Custom Reports: Experimental Features'
   use_experimental_features_before_they_are_generall_3dfaddd1: Use experimental features before they are generally enabled in production
-  pronouns_for_users_da46fb5: Pronouns for users
-  allows_users_to_pick_pronouns_that_will_be_display_870b94e0: |-
-    Allows users to pick pronouns that will be displayed after
-    their name when it is shown in the user interface.
   confetti_for_on_time_submissions_394e16ce: Confetti for On-Time Submissions
   displays_confetti_for_users_that_turn_in_an_assign_6899ccef: |-
     Displays confetti for users that turn in an assignment prior
@@ -807,11 +803,6 @@ en:
   allows_teachers_to_hide_course_sections_from_stude_eb69d87b: Allows teachers to hide course sections from students on the People page when there is more than one section in the course.
   mute_notifications_by_course_440e18be: Mute notifications by course
   allows_users_to_mute_notifications_on_a_course_lev_775b0362: Allows users to mute notifications on a course level granularity.
-  immediate_notifications_for_global_announcements_682f5a3d: Immediate notifications for global announcements
-  if_you_turn_this_on_when_an_account_admin_goes_to__42e74f56: |-
-    If you turn this on, when an account admin goes to the page to
-    create a global announcement, a checkbox will appear to send
-    notification directly to users when announcement starts.
   course_level_overrides_for_notification_preference_e86d1725: Course level overrides for notification preferences
   allows_users_to_override_specific_notification_pre_18cf5b9e: |-
     Allows users to override specific notification preferences on a
@@ -838,8 +829,6 @@ en:
   allow_a_teacher_to_set_the_number_of_allowed_attem_19deb51d: Allow a teacher to set the number of allowed attempts on an assignment via the UI
   assignment_bulk_editing_37248ca4: Assignment Bulk Editing
   allow_teachers_to_change_the_dates_on_a_set_of_ass_4d48baec: Allow teachers to change the dates on a set of assignments in one step
-  assignment_bulk_editing_phase_2_fde6f7d3: Assignment Bulk Editing phase 2
-  turns_on_phase_2_features_for_assignment_bulk_edit_20245881: Turns on phase 2 features for Assignment Bulk Editing
   bookmarking_for_enrollments_index_api_840be156: Bookmarking for Enrollments Index API
   use_bookmarking_for_api_pagination_in_enrollments__52b9bc28: Use bookmarking for API pagination in Enrollments Index
   submission_type_lti_placement_b448d5d0: Submission Type LTI Placement
@@ -868,6 +857,8 @@ en:
   allows_learning_outcomes_to_be_selectable_when_mig_acf15555: Allows learning outcomes to be selectable when migrating course content
   restricted_view_for_teachers_in_lmgb_52c78a62: Restricted view for teachers in LMGB
   hides_certain_students_and_sections_in_the_lmgb_if_47097d94: Hides certain students and sections in the LMGB if the teacher only has access to a particular section
+  outcomes_service_alignment_migration_5b4391ad: Outcomes Service Alignment Migration
+  includes_outcomes_service_alignments_when_exportin_6c578a35: Includes Outcomes Service alignments when exporting and importing course content
   system_and_user_generated_events_84bc4c8a: System- and User-Generated Events
   differentiate_between_system_and_user_generated_li_dc466585: |-
     Differentiate between system- and user-generated live events
@@ -901,6 +892,8 @@ en:
   disable_new_quiz_importing_and_migration_checkboxe_3f738b75: Disable New Quiz importing and migration checkboxes, defaulting them to enabled
   send_notifications_when_manually_created_access_to_a1631123: Send notifications when manually created access tokens are made
   granular_permissions_for_managing_wiki_pages_3ed89a84: Granular permissions for managing wiki pages
+  enable_recaptcha_by_default_for_self_registration_af9d50bd: Enable Recaptcha by default for self-registration
+  requires_recaptcha_for_self_registration_by_defaul_c1a9db63: Requires Recaptcha for self-registration by default
   disable_smart_app_banner_on_mobile_devices_bed9bf3b: Disable Smart App Banner on Mobile Devices
   remove_safari_mobile_banner_suggesting_user_downlo_b4251078: Remove Safari mobile banner suggesting user download application from app store.
   global_announcements_a78912c8: Global Announcements
@@ -1254,7 +1247,7 @@ en:
       about_google_docs_tooltip: About Google Docs Previews
       about_google_docs: |-
         Google Docs Previews allow users to view documents from
-        within Canvas, rather than having to download them and
+        within ClassOn, rather than having to download them and
         open the corresponding program (e.g. Word or Excel).
 
         Google Docs Previews can also render file types
@@ -1422,7 +1415,7 @@ en:
       account_reports:
         default:
           last_user_access:
-            text: This report shows the last login for active users.
+            text: This report shows the last login for active users. Please note, Last Access At is updated once every 10 minutes. That is our current threshold to determine activity for any given user session.
     lti_report_csv_description:
       account_reports:
         default:
@@ -1635,6 +1628,11 @@ en:
               text: Course SIS ID
           parameters:
             note1: Course ID can be left blank to run the report for all courses in the term.
+    lewisville_course_activity_report_csv_parameters:
+      account_reports:
+        default:
+          parameters:
+            header: Term
     mississippi_sis_csv_parameters:
       account_reports:
         default:
@@ -2018,7 +2016,7 @@ en:
     messages: Messages
     plugins: Plugins
     rubrics: Rubrics
-  your_browser_does_not_meet_the_minimum_requirement_2fa7c11f: Your browser does not meet the minimum requirements for ClassOn. Please visit the *Canvas Community* for a complete list of supported browsers.
+  your_browser_does_not_meet_the_minimum_requirement_2fa7c11f: Your browser does not meet the minimum requirements for ClassOn. Please visit the *ClassOn Community* for a complete list of supported browsers.
   group:
     memeber: Member
     name_required: Name is required
@@ -2179,8 +2177,6 @@ en:
       additional_comments: Additional comments
       buttons:
         submit_assignment: Submit Assignment
-      messages:
-        submitting: Submitting...
     syllabus_content:
       titles:
         course_syllabus: Course Syllabus
@@ -2489,7 +2485,7 @@ en:
       test_ldap_bind_help_header: ClassOn can't bind (login) to your LDAP server
       test_ldap_bind_help_body: 'Your LDAP server rejected the bind attempt. Things to consider:'
       test_ldap_bind_help_fixes_1: Verify the provided filter string (i.e. '(sAMAccountName={{login}})').
-      test_ldap_bind_help_fixes_2: Does the username require more scoping information? (i.e. 'cn=Canvas,ou=people,dc=example,dc=com').
+      test_ldap_bind_help_fixes_2: Does the username require more scoping information? (i.e. 'cn=ClassOn,ou=people,dc=example,dc=com').
       test_ldap_search_label: Testing LDAP search...
       test_ldap_search_help_header: ClassOn can't search your LDAP instance
       test_ldap_search_help_body: 'The search either failed or returned 0 results. Things to consider:'
@@ -2532,7 +2528,7 @@ en:
   cannot_create_event_for_deleted_course_c800f310: cannot create event for deleted course
   only_a_maximum_of_limit_events_can_be_created_b81c405e: only a maximum of %{limit} events can be created
   calendar_events_api:
-    ics_title: "%{course_or_group_name} Calendar (Canvas)"
+    ics_title: "%{course_or_group_name} Calendar (ClassOn)"
     ics_description_course: Calendar events for the course, %{course_name}
     ics_description_group: Calendar events for the group, %{group_name}
     ics_description_user: Calendar events for the user, %{user_name}
@@ -2605,11 +2601,11 @@ en:
         etherpad: "EtherPad is an open source project that lets you quickly set up shared documents.  It's fast enough that you can see what others are typing as they're typing it. On the other hand, \"pads\" aren't protected by a password so anyone with a link to them can edit them. EtherPad is better suited than Google Docs if you want to support anonymity and/or allowing people without Google accounts to participate.  \n  \n**Warning**: be sure you are familiar with [EtherPad's deletion policy](%{etherpad_deletion_policy_url}) to ensure your work is preserved."
       buttons:
         start_collaborating: Start Collaborating
-        delete_from_canvas: "Just Delete  \nfrom Canvas"
+        delete_from_canvas: "Just Delete  \nfrom ClassOn"
         delete_from_google_docs: "Also Delete From  \nGoogle Docs"
         update: Update Collaboration
       messages:
-        delete_google_doc_as_well: This collaboration is being stored as a Google Doc. Did you want to delete it just from Canvas, or remove it from Google Docs as well?
+        delete_google_doc_as_well: This collaboration is being stored as a Google Doc. Did you want to delete it just from ClassOn, or remove it from Google Docs as well?
       collaboration_name: "%{course_or_group_name} Collaboration"
     index:
       page_title: Collaboration
@@ -3918,7 +3914,7 @@ en:
     static_page:
       links:
         skip_navigation: Skip Navigation
-      created_with_canvas: Created with Canvas
+      created_with_canvas: Created with ClassOn
       logo: logo
     wizard_box:
       headers:
@@ -4479,7 +4475,7 @@ en:
   failed_to_validate_cas_ticket_error_31aa4c63: 'Failed to validate CAS ticket: %{error}'
   there_was_a_problem_logging_in_at_institution_5a298155: There was a problem logging in at %{institution}
   validated_ticket_for_username_c6c7722f: Validated ticket for %{username}
-  canvas_doesn_t_have_an_account_for_user_user_5bcae0dd: 'Canvas doesn''t have an account for user: %{user}'
+  canvas_doesn_t_have_an_account_for_user_user_5bcae0dd: 'ClassOn doesn''t have an account for user: %{user}'
   cas_server_rejected_ticket_message_code_a6ef4093: 'CAS server rejected ticket: %{message} (%{code})'
   cas_server_rejected_ticket_5dc2a0bc: CAS server rejected ticket.
   email_already_in_use_330248e: Email already in use
@@ -4551,12 +4547,12 @@ en:
           request_password: Request Password
         back_to_login: Back to Login
       new:
-        page_title: Log In to Canvas
+        page_title: Log In to ClassOn
     logout_confirm:
       page_title: Log Out
       log_out: Log Out
       details:
-        log_out: Are you sure you want to log out of Canvas?
+        log_out: Are you sure you want to log out of ClassOn?
       cancel: Cancel
     logout_landing:
       page_title: Logged Out
@@ -4691,7 +4687,7 @@ en:
       description: This enables importing Academic Benchmark standards into ClassOn.
     catalog_provisioner:
       name: Catalog Provisioner
-      description: Catalog Account Provisioner for Canvas
+      description: Catalog Account Provisioner for ClassOn
     pv4:
       description: Page Views 4
     respondus_soap_endpoint:
@@ -4700,6 +4696,8 @@ en:
     uuid_provisioner:
       name: UUID provisioner
       description: This enables exporting UUIDs into Quiz.Next services.
+    apple:
+      description: Sign in With Apple
     clever:
       description: Clever Login
     facebook:
@@ -4762,7 +4760,7 @@ en:
       description: Select account reports
     app_center:
       name: App Center
-      description: App Center for tracking/installing external tools in Canvas
+      description: App Center for tracking/installing external tools in ClassOn
     pandapub:
       name: PandaPub
       description: Pub/Sub service
@@ -4784,6 +4782,9 @@ en:
         base_url: Base URL
         apps_index_endpoint: Apps Index Endpoint
         app_reviews_endpoint: App Show Endpoint
+    apple_settings:
+      labels:
+        client_id: Service ID
     assignment_freezer_settings:
       description: |-
         This plugin allows admins to check a property on assignments that makes the configured
@@ -4910,7 +4911,7 @@ en:
         You will need an account either at [Kaltura.com](%{kaltura_url})
         or with a self-hosted instance of Kaltura.
 
-        **Note:** once you have Kaltura configured within Canvas,
+        **Note:** once you have Kaltura configured within ClassOn,
         you need to go to the Kaltura Management Console and under "Settings ->
         Integration Settings" enable server notifications with a
         Notification URL of:
@@ -5301,8 +5302,8 @@ en:
         You can also sign up to have notifications sent to your Twitter account.
         These notifications will be sent as direct messages to yourself from
         yourself, and won't appear in your public stream.
-      delicious_description: Delicious is a tool that lets you store and share your bookmarks with others. Canvas's rich content editor will let you search your Delicious tags to easily link from within ClassOn to other resources you find useful.
-      diigo_description: Diigo is a social bookmarking tool tailored specifically to research and education. Canvas's rich content editor will let you search your Diigo tags to easily link from within ClassOn to other resources you find useful.
+      delicious_description: Delicious is a tool that lets you store and share your bookmarks with others. ClassOn's rich content editor will let you search your Delicious tags to easily link from within ClassOn to other resources you find useful.
+      diigo_description: Diigo is a social bookmarking tool tailored specifically to research and education. ClassOn's rich content editor will let you search your Diigo tags to easily link from within ClassOn to other resources you find useful.
       no_approved_integrations: Third-party applications can request permission to access the ClassOn site on your behalf. As you begin authorizing applications you will see them listed here.
       approved_integrations: 'These are the third-party applications you have authorized to access the ClassOn site on your behalf:'
       loading_token_details: Loading Token Details...
@@ -5312,7 +5313,7 @@ en:
         retrieve the full token anymore, you'll have to regenerate it to get a new
         value.
       generate_access_token_description: |-
-        Access tokens are what allow third-party applications to access Canvas
+        Access tokens are what allow third-party applications to access ClassOn
         resources on your behalf. These tokens are normally created automatically for
         applications as needed, but if [you're developing a new or limited
         project](%{documentation_url}) you can just generate the token from here.
@@ -6537,7 +6538,7 @@ en:
         You don't have any courses, so this page won't be very exciting for now.
                 Once you've created or signed up for courses, you'll start to see
                 conversations from all of your classes.
-      welcome_to_happiness: Welcome to Canvas!
+      welcome_to_happiness: Welcome to ClassOn!
     current_conference:
       participant_count:
         one: 1 participant
@@ -6770,11 +6771,7 @@ en:
   card_view_eaf73185: Card View
   recent_activity_51239235: Recent Activity
   list_view_430aecce: List View
-  smart_alerts_settings:
-    threshold_12h: 12h
-    threshold_24h: 24h
-    threshold_36h: 36h
-  canvas_by_instructure_1490381: ClassOn LMS by ClassOn
+  canvas_by_instructure_1490381: LMS by ClassOn
   help_with_content_licensing_a146fb0e: Help with content licensing
   help_with_course_visibilities_6b6e22a4: Help with course visibilities
   title_separator: ": "
@@ -6917,7 +6914,7 @@ en:
   previous_page_928fc112: Previous Page
   next_page_d2a39853: Next Page
   page_pagenum_20dbfeb8: Page %{pageNum}
-  product_name: Canvas
+  product_name: ClassOn
   account:
     root_account_cant_have_sis_id: SIS IDs cannot be set on root accounts
     sis_id_in_use: SIS ID "%{sis_id}" is already in use
@@ -6947,7 +6944,7 @@ en:
     default_term_name: Default Term
     feedback_coach: Ask the Community
     feedback_coach_sub: Get help from a ClassOn expert
-    feedback_feature_request_sub: Have an idea to improve Canvas?
+    feedback_feature_request_sub: Have an idea to improve ClassOn?
     tab_root_accounts: Root Accounts
   this_assignment_submission_is_my_own_original_work_e820ce4b: This assignment submission is my own, original work
   people_b4ebb13c: People
@@ -6970,7 +6967,7 @@ en:
     send_message: Send Message
     file_a_ticket_for_a_personal_response_from_our_support_team: File a ticket for a personal response from our support team
     for_an_instant_answer: 'For an instant answer:'
-    see_if_your_issue_is_addressed_in_the_canvas_guides: See if your issue is addressed in the *Canvas Guides*.
+    see_if_your_issue_is_addressed_in_the_canvas_guides: See if your issue is addressed in the *ClassOn Guides*.
     subject: Subject
     description: Description
     include_a_link_to_a_screencast_or_screenshot_using_something_like_jing: Include a link to a screencast/screenshot using something like *Jing*.
@@ -7123,6 +7120,7 @@ en:
     upload_error_timeout: 'The request timed out: %{url}'
     upload_error_over_quota: 'file size exceeds quota limits: %{bytes} bytes'
     upload_error_unexpected: An unknown error occurred downloading from %{url}
+  login_with_provider_3fd3998e: Login with %{provider}
   authentication_provider:
     default_login_handle_name: Email
     default_delegated_login_handle_name: Login
@@ -7157,7 +7155,7 @@ en:
   idp_loginresponse_destination_75546c46: IdP LoginResponse destination
   canvas_thinks_response_is_valid_8cc4a67d: ClassOn thinks response is valid
   validation_error_3b943100: Validation Error
-  user_succesfully_logged_into_canvas_6cfbe279: User succesfully logged into Canvas
+  user_succesfully_logged_into_canvas_6cfbe279: User succesfully logged into ClassOn
   canvas_login_failure_message_4c922f2f: ClassOn Login failure message
   logged_in_user_id_5a54b1ae: Logged in user id
   idp_loginresponse_encoded_460dca94: IdP LoginResponse encoded
@@ -7563,7 +7561,7 @@ en:
               Thank you,
               ClassOn Support
   the_message_you_sent_with_the_subject_line_subject_c73f92e4: |-
-    The message you sent with the subject line "%{subject}" was not delivered. To reply to ClassOn messages from this email, it must first be a confirmed communication channel in your ClassOn profile. Please visit your profile and resend the confirmation email for this email address [See https://community.canvaslms.com/docs/DOC-2281]. You may also contact this person via the ClassOn Inbox [See https://community.canvaslms.com/docs/DOC-2670].
+    The message you sent with the subject line "%{subject}" was not delivered. To reply to ClassOn messages from this email, it must first be a confirmed communication channel in your ClassOn profile. Please visit your profile and resend the confirmation email for this email address. You may also contact this person via the ClassOn Inbox.
 
               Thank you,
               ClassOn Support
@@ -8449,12 +8447,12 @@ en:
       name: Name
       title: Title
       message_title: Message
-      message_me: message me in Canvas
+      message_me: message me in ClassOn
       service_contact: contact %{user} with %{service}
       social_instructions: Check the contact methods you'd like to be visible to others on your profile.
       manage_settings: Manage Registered Services
       ways_to_contact_user: Contact
-      message_user_canvas: Message %{user} in Canvas
+      message_user_canvas: Message %{user} in ClassOn
       bio: Biography
       user_has_no_bio: "%{user} hasn't added a bio"
       user_enrolled: Enrollments
@@ -9149,7 +9147,7 @@ en:
     no_lcid_found: No bb_lcid was specified for a row
     export_failed_not_found: The course with bb_lcid %{id} could not be found in Blackboard with user %{user_name}
     export_failed: There was an error exporting the course with bb_lcid %{id} from Blackboard
-    export_failed_with_id: There was an error importing the course with bb_lcid %{id} into Canvas
+    export_failed_with_id: There was an error importing the course with bb_lcid %{id} into ClassOn
     export_failed_no_id: There was an error importing a course
   angel:
     file_import_fail: Could not import file "%{file_path}"
@@ -9951,11 +9949,11 @@ en:
         body: 'ClassOn Alert - Collaboration Invite: %{document}, %{course_or_group}'
     confirm_email_communication_channel:
       email:
-        subject: 'Confirm Email: Canvas'
+        subject: 'Confirm Email: ClassOn'
         body: The email address, %{email} is being registered at %{website} for the user, %{user}.
         details: 'To confirm this registration, please visit the following url:'
         html:
-          subject: 'Confirm Email: Canvas'
+          subject: 'Confirm Email: ClassOn'
           details: Click here to confirm this registration
           body: The email address, %{email} is being registered at %{website} for the user, %{user}.
     confirm_registration:
@@ -10009,7 +10007,7 @@ en:
       summary:
         unknown_user: Unknown User
         subject: "%{user_name}, you just sent a message in ClassOn."
-        body: "%{user_name}, you just sent a message in Canvas:"
+        body: "%{user_name}, you just sent a message in ClassOn:"
       twitter:
         tweet: ClassOn Alert - Message from %{user_name}.
     conversation_message:
@@ -10029,7 +10027,7 @@ en:
       summary:
         unknown_user: Unknown User
         subject: "%{user_name} just sent you a message in ClassOn."
-        body: "%{user_name} just sent you a message in Canvas:"
+        body: "%{user_name} just sent you a message in ClassOn:"
       twitter:
         tweet: ClassOn Alert - Message from %{user_name}.
     enrollment_accepted:
@@ -10152,7 +10150,7 @@ en:
         email_body: 'The event, %{event_title}, for the course, %{course_name}, has changed times. It''s now: %{new_time}'
     forgot_password:
       email:
-        subject: 'Forgot Password: Canvas'
+        subject: 'Forgot Password: ClassOn'
         requested_password_reset: You requested a confirmation of your password for logging into ClassOn.
         labels:
           associated_with_accounts: This address is associated with the following accounts
@@ -10163,7 +10161,7 @@ en:
         associated_login: This address is associated with the login, "%{login_identifier}".
         password_from_account: The password for this login should have been given to you by the system administrators at %{account_name}, and ClassOn doesn't have access to your password.  If your password is not working, please contact the system administrators about changing or verifying your password.
         html:
-          subject: 'Forgot Password: Canvas'
+          subject: 'Forgot Password: ClassOn'
           requested_password_reset: You requested a confirmation of your password for logging into ClassOn.
           labels:
             associated_with_accounts: This address is associated with the following accounts
@@ -10513,18 +10511,18 @@ en:
     pseudonym_registration:
       email:
         subject: 'Finish Registration: ClassOn'
-        body: You have been registered for a ClassOn account at %{account}!  Before you can log in and start using Canvas, you'll need to finish the configuration process.
+        body: You have been registered for a ClassOn account at %{account}!  Before you can log in and start using ClassOn, you'll need to finish the configuration process.
         link_message: 'To finish the registration process, please visit the following url:'
         html:
           subject: 'Finish Registration: ClassOn'
           link: Click here to finish the registration process
-          body: You have been registered for a ClassOn account at %{account}! Before you can log in and start using Canvas, you'll need to finish the configuration process.
+          body: You have been registered for a ClassOn account at %{account}! Before you can log in and start using ClassOn, you'll need to finish the configuration process.
       sms:
-        body: You have been registered for a ClassOn account at %{account}!  Before you can log in and start using Canvas, you'll need to finish the configuration process.
+        body: You have been registered for a ClassOn account at %{account}!  Before you can log in and start using ClassOn, you'll need to finish the configuration process.
         link: 'Click the following url to finish the registration process: %{link}'
       summary:
         subject: 'Finish Registration: ClassOn'
-        body: You have been registered for a ClassOn account at %{account}!  Before you can log in and start using Canvas, you'll need to finish the configuration process.
+        body: You have been registered for a ClassOn account at %{account}!  Before you can log in and start using ClassOn, you'll need to finish the configuration process.
         link_message: 'To finish the registration process, please visit the following url:'
       twitter:
         body: ClassOn Alert - You have been registered for a ClassOn account at %{account}!
@@ -10981,7 +10979,7 @@ en:
       quiz_is_locked: The quiz "%{title}" could not be copied because it is locked.
       quiz: The quiz "%{title}" failed to export
       quizzes: Some quizzes failed to export
-      canvas_meta: Failed to export canvas-specific meta data
+      canvas_meta: Failed to export classon-specific meta data
       wiki_pages: Failed to export wiki pages
       assignments: Failed to export some assignments
       topics: Failed to export some topics
@@ -11149,7 +11147,7 @@ en:
   assignment_name_course_name_override_is_now_due_ed5ce1e: "%{assignment_name}, %{course_name} (%{override}) is now due"
   assignment_name_course_name_override_no_longer_has_5a94da2b: "%{assignment_name}, %{course_name} (%{override}) no longer has a due date"
   click_here_to_view_the_submission_24777a69: Click here to view the submission
-  canvas_3962b702: Canvas
+  canvas_3962b702: ClassOn
   content_link_error_assignment_name_course_name_b8be789a: Content Link Error - %{assignment_name}, %{course_name}
   students_are_attempting_to_access_unpublished_cont_be329862: Students are attempting to access unpublished content, %{bad_link}, in %{asset_link}.
   students_are_clicking_on_bad_link_to_content_that__d9c51d0d: Students are clicking on %{bad_link} to content that has been removed in %{asset_link}.
@@ -11167,13 +11165,13 @@ en:
   user_name_you_just_sent_a_message_in_canvas_b1fd4598: "%{user_name}, you just sent a message in ClassOn."
   user_name_you_just_sent_a_message_in_canvas_do_not_7c7bc1c6: "%{user_name}, you just sent a message in ClassOn - Do not reply"
   view_this_message_in_conversations_5a16bc9f: View this message in Conversations
-  reply_to_this_message_in_canvas_7ec72dce: Reply to this message in Canvas
+  reply_to_this_message_in_canvas_7ec72dce: Reply to this message in ClassOn
   this_message_includes_media_comments_to_listen_or__5fc98641: 'This message includes media comments. To listen or reply, click this link: %{link}.'
   you_can_reply_to_this_message_in_canvas_by_replyin_c9f9abb: 'You can reply to this message in ClassOn by replying directly to this email, or by clicking this link: %{link}.  If you need to include an attachment, please log in to ClassOn and reply through the Inbox.'
   please_do_not_reply_to_this_email_it_will_not_be_d_1e49982a: Please do not reply to this email, it will not be delivered.
   you_can_fac644aa: 'You can '
   reply_to_this_message_in_canvas_2542e450: reply to this message in ClassOn.
-  you_just_sent_a_message_in_canvas_86b4945c: You just sent a message in Canvas
+  you_just_sent_a_message_in_canvas_86b4945c: You just sent a message in ClassOn
   user_name_just_sent_you_a_message_in_canvas_a2cb3bf4: "%{user_name} just sent you a message in ClassOn."
   user_name_just_sent_you_a_message_in_canvas_do_not_16b13cf2: "%{user_name} just sent you a message in ClassOn - Do not reply"
   new_canvas_message_from_user_name_94cc720: New ClassOn message from %{user_name}
@@ -11327,6 +11325,7 @@ en:
   additional_sis_sync_assignment_quiz_and_discussion_d941fa5: Additional SIS Sync Assignment, Quiz, and Discussion settings
   require_assignment_due_date_778b200d: Require assignment due date
   limit_assignment_names_lengths_max_255_5ee9ebb5: Limit assignment names lengths (max 255)
+  automatically_disable_post_to_sis_on_assignments_w_dd7e873a: Automatically disable "Post to SIS" on assignments when grading period closes
   sis_grade_export_settings_45a9f709: SIS Grade Export Settings
   sync_grades_to_sis_checkbox_is_enabled_by_default__fad7a785: '"Sync Grades to SIS" checkbox is enabled by default for assignments, graded discussions, and quizzes'
   reported_3de7086a: Reported
@@ -11381,8 +11380,8 @@ en:
   students_can_see_originality_score_797fe634: Students can see originality score
   enabled_web_services_f620b2be: Enabled Web Services
   who_can_create_new_courses_7a6c1338: Who Can Create New Courses
-  smart_alerts_43776718: Smart Alerts
-  threshold_in_hours_to_notify_students_within_f33820aa: Threshold (in hours) to notify students within
+  smart_assignment_alerts_abc2224: Smart Assignment Alerts
+  hours_from_due_date_before_students_are_alerted_6584bae6: Hours (from due date) before students are alerted
   add_account_admins_99c03c9e: Add Account Admins
   add_more_e1ffaa65: Add More
   edit_announcement_title_cce0b4e: Edit announcement %{title}
@@ -11507,10 +11506,14 @@ en:
   are_you_sure_26795d3c: Are you sure?
   deleting_6421031e: deleting...
   save_11a80ec3: Save
+  you_will_need_to_create_a_service_id_apple_develop_4e684a7a: |-
+    You will need to create a Service ID [Apple Developer Console](%{apple_url}).
+    Enable Sign in with Apple, and add %{callback_url} as a return URL. Enter the Identifier here.
   self_registration_156392d6: Self Registration
   disabled_3b1b332a: Disabled
   all_account_types_e83c1516: All Account Types
   observer_accounts_only_30c70a70: Observer Accounts Only
+  require_captcha_for_self_registration_b3b2ea02: Require Captcha for Self Registration
   cas_url_4ba2843e: CAS URL
   you_will_need_to_register_an_application_on_clever_ecdb9faf: |-
     You will need to [register an application on Clever](%{clever_url}).
@@ -11801,7 +11804,7 @@ en:
   remove_f47dc62a: Remove
   prerequisites_49659f16: 'Prerequisites:'
   open_title_in_a_new_window_b29fed77: Open %{title} in a new window
-  you_are_trying_to_launch_insecure_content_from_wit_5c1c692b: You are trying to launch insecure content from within a secure site (canvas). Some web browsers may prevent this content from loading.
+  you_are_trying_to_launch_insecure_content_from_wit_5c1c692b: You are trying to launch insecure content from within a secure site. Some web browsers may prevent this content from loading.
   inbox_bb245a60: Inbox
   archive_selected_d64506ca: Archive Selected
   delete_selected_a023ccf8: Delete Selected
@@ -12130,7 +12133,7 @@ en:
       keyboard_navigation:
         close: Press comma to close this dialog
     mobile_auth:
-      log_in_to_canvas: Log In To Canvas
+      log_in_to_canvas: Log In To ClassOn
   you_are_currently_acting_as_user_name_8d2be0ee: You are currently acting as %{user_name}
   stop_acting_as_user_8809a97f: Stop Acting as User
   show_navigation_menu_34e7f441: Show Navigation Menu
@@ -12150,7 +12153,6 @@ en:
   need_a_canvas_account_221d18ed: Need a ClassOn Account?
   click_here_it_s_free_eeccb9cb: Click Here, It's Free!
   forgot_password_f0c3fbac: Forgot Password?
-  login_with_provider_3fd3998e: Login with %{provider}
   error_logging_in_error_msg_f61efaa3: 'Error logging in: %{error_msg}'
   create_account_263ec6: Create Account
   log_out_379ba28a: Log Out
@@ -12438,7 +12440,6 @@ en:
   site:
     view_privacy_policy: View Privacy Policy
   please_enter_your_label_name_7745272d: 'Please enter your %{label_name}:'
-  login_with_auth_type_a0aaa52a: Login with *%{auth_type}*
   this_course_cannot_be_added_to_the_courses_menu_at_a3fbb11e: This course cannot be added to the courses menu at this time.
   chat_2153c6b7: Chat
   all_terms_cd27b0fb: All Terms
@@ -12655,7 +12656,7 @@ en:
   a_handy_key_value_dump_of_a_host_of_interesting_en_d0518dfe: A handy key/value dump of a host of interesting environment info for the reporting user
   the_unique_id_used_for_representing_the_specific_r_3bdf5870: The unique id used for representing the specific request/response cycle this error report occured around
   should_be_self_evident_the_canvas_id_of_the_report_44378262: should be self-evident, the ClassOn ID of the reporting user
-  same_value_as_canvas_url__c_will_probably_be_going_37027686: Same value as 'Canvas_URL__c', will probably be going away soon
+  same_value_as_canvas_url__c_will_probably_be_going_37027686: Same value as 'ClassOn_URL__c', will probably be going away soon
   the_salesforce_account_id_if_it_exists_e7949706: The Salesforce Account ID (if it exists)
   add_your_zendesk_instance_s_custom_field_id_for_ea_3aeb75f4: 'Add your Zendesk instance''s custom field ID for each of the following (fields that do not have ID''s will not be logged):'
   provisioned_catalog_account_26339afd: Provisioned Catalog Account
@@ -12678,11 +12679,6 @@ en:
   create_132b3be1: Create
   edit_your_catalog_account_cce59310: Edit your Catalog Account
   update_4d8ee62: Update
-  wiki_page_cap_minutes_33f17a9: Wiki Page Cap (minutes)
-  discussion_cap_minutes_3d0a3846: Discussion Cap (minutes)
-  quiz_cap_minutes_fa07380: Quiz Cap (minutes)
-  assignment_cap_minutes_d9b0fe22: Assignment Cap (minutes)
-  other_cap_minutes_ad4d1428: Other Cap (minutes)
   user_id_or_sis_id_sis_id_should_be_prepended_with__980ff02b: User ID or SIS ID (SIS ID should be prepended with sis_user_id:)
   include_deleted_enrollments_1c87684a: Include Deleted Enrollments
   this_is_a_report_of_all_students_enrolled_in_a_cou_d0137d3c: |-
@@ -12693,6 +12689,9 @@ en:
   include_unsubmitted_deleted_submissions_99fc2aad: Include Unsubmitted & Deleted Submissions
   enrolled_a6a517cd: Enrolled
   withdrawn_4c838347: Withdrawn
+  current_terms_bcf31fb2: Current Terms
+  course_start_date_on_before_a3a32883: Course Start Date On/Before
+  course_end_date_on_after_a6bbb0b7: Course End Date On/After
   all_configured_apps_a14eef0a: All Configured Apps
   course_implemented_apps_fa658f5a: Course Implemented Apps
   include_unpublished_courses_7a0e7aab: Include Unpublished Courses
@@ -13702,6 +13701,8 @@ en:
     getting_file: Retrieving File...
   button:
     submit_assignment: Submit Assignment
+  uploading_progress_d62bb6e9: Uploading Progress
+  percent_complete_e46b6148: "%{percent}% complete"
   attached_files_must_be_greater_than_0_bytes_7f57bee7: Attached files must be greater than 0 bytes
   selected_filename_7552a8c0: selected %{filename}
   file_tree_expanded_a1d20c4a: File tree expanded
@@ -14503,7 +14504,7 @@ en:
     published_status: Published
     unpublished_status: Unpublished
   incompleteregistration:
-    welcome_to_canvas: Welcome to Canvas!
+    welcome_to_canvas: Welcome to ClassOn!
     get_started: Get Started
   video_player_b371005: Video Player
   canvas_introduction_video_2d81f3ad: ClassOn Introduction Video
@@ -14795,6 +14796,8 @@ en:
   group_assignments_cannot_be_enabled_for_anonymousl_ed896b1c: Group assignments cannot be enabled for anonymously graded assignments
   peer_reviews_cannot_be_enabled_for_moderated_assig_149d33c4: Peer reviews cannot be enabled for moderated assignments
   group_assignments_cannot_be_enabled_for_moderated__6b2faeef: Group assignments cannot be enabled for moderated assignments
+  points_bceb5005: points
+  students_1b8cd07b: Students
   assignment_d8387b78: assignment
   grader_is_required_62c88f67: Grader is required
   grader_count_is_required_45b6c85b: Grader count is required
@@ -15060,7 +15063,6 @@ en:
   sub_account_daeadd0: Sub-Account
   click_to_sort_by_sub_account_ascending_989b1ab: Click to sort by sub-account ascending
   click_to_sort_by_sub_account_descending_88c611db: Click to sort by sub-account descending
-  students_1b8cd07b: Students
   course_option_links_a79d263d: Course option links
   count_people_successfully_enrolled_into_course_nam_db8eed18:
     one: "%{user_name} successfully enrolled into *%{course_name}*."
@@ -15113,10 +15115,10 @@ en:
   view_user_groups_d2bfa855: View user groups
   content_on_this_page_violates_the_security_policy__25685d8a: Content on this page violates the security policy, contact your admin for assistance.
   canvas_content_security_policy_c3d7bf2b: ClassOn Content Security Policy
-  the_content_security_policy_allows_you_to_restrict_197ca4ff: |-
+  the_content_security_policy_allows_you_to_restrict_eaa7c0d6: |-
     The Content Security Policy allows you to restrict custom
                    JavaScript that runs in your instance of ClassOn. You can manually add
-                   up to %{max_domains} domains to your whitelist. Wild cards are recommended
+                   up to %{max_domains} allowed domains. Wild cards are recommended
                    (e.g. *.classon.edu.vn). ClassOn domains are included
                    automatically and do not count against your 50 domain limit.
   inherit_content_security_policy_94aff861: Inherit Content Security Policy
@@ -15124,28 +15126,27 @@ en:
   blocked_domain_name_b5b93150: Blocked Domain Name
   requested_bbdb5b26: Requested
   last_attempt_7258ebd7: Last Attempt
-  add_to_whitelist_24f3f1ba: Add to Whitelist
+  add_as_allowed_e95540be: Add as Allowed
   no_violations_have_been_reported_977a08d1: No violations have been reported.
   csp_violations_337f8529: CSP Violations
-  success_you_added_hostname_to_the_whitelist_6061236e: 'Success: You added %{hostname} to the whitelist.'
-  add_hostname_to_the_whitelist_c808192e: Add %{hostname} to the whitelist
+  success_you_added_hostname_as_an_allowed_domain_4713bfe8: 'Success: You added %{hostname} as an allowed domain.'
+  add_hostname_as_an_allowed_domain_1f58c38d: Add %{hostname} as an allowed domain
   violation_log_491edd84: Violation Log
-  something_went_wrong_loading_the_violations_try_re_6e2fa92: Something went wrong loading the violations, try reloading the page.
+  something_went_wrong_loading_the_violations_try_re_9461d057: Something went wrong loading the violations. Try reloading the page.
   invalid_domain_e810c1d: Invalid domain
-  whitelist_e88fd8ed: Whitelist
-  whitelist_count_max_26a270f: Whitelist (%{count}/%{max})
+  domains_66feaf7f: Domains
+  domains_count_max_a52b7947: Domains (%{count}/%{max})
   view_violation_log_e80ea322: View Violation Log
-  you_have_reached_the_domain_limit_you_can_add_more_e5ccc070: You have reached the domain limit.  You can add more domains by deleting existing domains in your whitelist.
-  whitelist_editing_is_disabled_when_security_settin_ab40cc90: Whitelist editing is disabled when security settings are inherited from a parent account.
+  you_have_reached_the_domain_limit_you_can_add_more_1143333a: You have reached the domain limit. You can add more domains by deleting existing domains in your allowed list.
+  domain_editing_is_disabled_when_security_settings__3feb6da0: Domain editing is disabled when security settings are inherited from a parent account.
   domain_name_6c783b0: Domain Name
   add_domain_f15bc6c1: Add Domain
-  no_domains_whitelisted_9dfb4960: No domains whitelisted
-  whitelisted_domains_faed9e0c: Whitelisted Domains
-  remove_domain_from_the_whitelist_14c7d5e9: Remove %{domain} from the whitelist
-  whitelisted_tool_domains_7df5e481: Whitelisted Tool Domains
-  the_following_domains_have_automatically_been_adde_2c7a1654: |-
-    The following domains have automatically been added to your
-                     whitelist from tools already existing in your account.
+  no_allowed_domains_b6633d12: No allowed domains
+  allowed_domains_ee7868c8: Allowed Domains
+  remove_domain_as_an_allowed_domain_c510a69e: Remove %{domain} as an allowed domain
+  associated_tool_domains_ba5767c5: Associated Tool Domains
+  the_following_domains_have_automatically_been_allo_cea27372: |-
+    The following domains have automatically been allowed from tools that already exist in your account.
                      To remove these domains, remove the associated tools.
   note_associated_tools_are_only_listed_once_even_if_ebae2aba: |-
     NOTE: Associated tools are only listed once, even if they have
@@ -15356,6 +15357,7 @@ en:
   due_at_5d7d2fa: Due At
   available_from_587ce92f: Available From
   available_until_f3b9c4ed: Available Until
+  this_assignment_has_too_many_dates_to_display_262f555f: This assignment has too many dates to display.
   this_assignment_has_no_default_dates_ae314295: This assignment has no default dates.
   select_assignment_title_4571ffcb: 'Select assignment: %{title}'
   revert_date_changes_5105ce5: Revert date changes
@@ -15626,7 +15628,7 @@ en:
   arc_a935e585: ARC
   in_class_23eeca38: In Class
   app_b157c2b3: App
-  non_canvas_11f36d4a: Non Canvas
+  non_canvas_11f36d4a: Non ClassOn
   add_submission_type_8690db4b: Add submission type
   or_9b70ccaa: Or
   and_7fcc2911: And
@@ -15911,11 +15913,60 @@ en:
   learn_more_about_collaborations_2978f66d: Learn more about collaborations
   you_have_no_collaboration_apps_configured_talk_to__6733123a: You have no Collaboration apps configured. Talk to your teacher to get some set up.
   getting_started_with_collaborations_794240ba: Getting started with Collaborations
+  collaborations_are_web_based_tools_to_work_collabo_6fa285b6: Collaborations are web-based tools to work collaboratively on tasks like taking notes or grouped papers. Talk to your teacher to get started.
   collaborations_are_web_based_tools_to_work_collabo_6e9f7b3f: Collaborations are web-based tools to work collaboratively on tasks like taking notes or grouped papers. Get started by clicking on the "+ Collaboration" button.
   loading_collaborations_e6c5f262: Loading collaborations
   add_collaboration_da9665ac: Add Collaboration
   collaboration_ce3e2bac: "+ Collaboration"
   loaded_more_collaborations_13f1d630: Loaded More Collaborations.
+  all_items_a49b66c7: All Items
+  other_1c6d9c79: Other
+  moved_assignment_name_to_scoring_range_lower_upper_edd6fc4e: Moved assignment %{name} to scoring range %{lower} - %{upper}
+  move_to_lower_upper_94cb604f: Move to %{lower} - %{upper}
+  assignment_name_options_43b1795: assignment %{name} options
+  loading_1d2ad2d7: Loading..
+  search_assignments_8c3c21bb: Search Assignments
+  filter_assignment_category_63acaed4: Filter Assignment Category
+  item_category_category_icon_for_item_name_item_nam_ff2b97f0: "%{item_category} category icon for item name %{item_name}"
+  no_items_found_870b2d0d: No items found
+  upper_to_lower_168f5fe7: "%{upper} to %{lower}"
+  add_items_into_scoring_range_title_be08104e: Add Items Into %{scoring_range_title}
+  add_items_44913315: Add Items
+  count_items_found_224f86d3:
+    zero: No items found
+    one: One item found
+    other: "%{count} items found"
+  conditional_release:
+    and: "&"
+  or_ef4e808: or
+  splitting_disabled_reached_maximum_of_three_assign_716acb13: 'Splitting disabled: reached maximum of three assignment groups in a scoring range'
+  click_to_split_set_here_9c35462a: Click to split set here
+  click_to_merge_sets_here_638fcac7: Click to merge sets here
+  label_as_gradingtype_ae164bd9: "%{label}, as %{gradingType}"
+  top_bound_282d045b: Top Bound
+  lower_bound_ed528347: Lower Bound
+  division_cutoff_cutoff_value_e938bc9d: Division cutoff %{cutoff_value}
+  sets_are_split_click_to_merge_99552cdb: Sets are split, click to merge
+  sets_are_merged_click_to_split_fa741a5f: Sets are merged, click to split
+  removed_assignment_assignment_name_835cc776: Removed assignment %{assignment_name}
+  assignment_set_set_index_28b1f973: Assignment set %{set_index}
+  scoring_range_upperbound_to_lowerbound_c017669b: Scoring range %{upperBound} to %{lowerBound}
+  add_items_to_score_range_297d413b: Add Items to Score Range
+  percent_448ea947: percent
+  letter_grade_f00fedc4: letter grade
+  gpa_scale_6710e2ee: GPA scale
+  other_ddacb37d: other
+  score_pts_adcb1af3: "%{score} pts"
+  score_points_3c48e2a8: "%{score} points"
+  score_letter_grade_b3bb9e52: "%{score} letter grade"
+  score_percent_11941c81: "%{score} percent"
+  splitting_disabled_there_can_only_be_a_maximum_of__7070ec11: 'Splitting disabled: there can only be a maximum of three assignment groups in a scoring range.'
+  must_not_be_empty_80fd90b8: must not be empty
+  must_be_a_number_f6e09df7: must be a number
+  number_is_too_large_4da4af0a: number is too large
+  number_is_too_small_618a6ca7: number is too small
+  must_provide_valid_letter_grade_999219e3: must provide valid letter grade
+  these_scores_are_out_of_order_4f0859ef: these scores are out of order
   close_details_sidebar_ff8f663d: Close details sidebar
   lowerbound_to_upperbound_352a3c0b: "%{lowerBound}+ to %{upperBound}"
   view_range_student_details_8116d68a: View range student details
@@ -15950,24 +16001,14 @@ en:
   paste_google_meet_links_into_calendar_events_annou_2e363fc7: Paste Google Meet links into Calendar Events, Announcements, Discussions, and anywhere you use the Rich Content Editor (RCE)
   visit_google_meet_ebdaf94f: Visit Google Meet
   to_create_a_link_you_can_use_in_canvas_you_ll_need_7dd85497: to create a link you can use in ClassOn. You’ll need a Google account to use Google Meet.
-  learn_how_to_use_google_meet_in_canvas_3e7aadd9: Learn how to use Google Meet in Canvas
+  learn_how_to_use_google_meet_in_canvas_3e7aadd9: Learn how to use Google Meet in ClassOn
   microsoft_teams_99cb45c0: Microsoft Teams
   if_your_school_uses_microsoft_teams_you_can_use_th_992dff59: If your school uses Microsoft Teams, you can use the Enhanced Rich Content Editor (RCE) to easily add a Team room while creating Calendar Events, Announcements, discussions posts and more.
-  learn_how_to_use_microsoft_teams_in_canvas_8b79dde: Learn how to use Microsoft Teams in Canvas
+  learn_how_to_use_microsoft_teams_in_canvas_8b79dde: Learn how to use Microsoft Teams in ClassOn
   conferences_powered_by_bigbluebutton_is_unable_to__37ef28fe: |-
     Conferences, powered by BigBlueButton, is unable to handle current demand.  Consider upgrading to
             Premium BigBlueButton or use one of the following video conferencing providers.  Please talk to your local
             admin for additional guidance.
-  canvas_conferences_is_a_free_service_provided_by_b_cc0253e: ClassOn Conferences is a free service provided by BigBlueButton.
-  if_your_institution_is_likely_to_need_more_than_10_297382d: |-
-    If your institution is likely to need more than 10 concurrent Conferences powered by
-              BigBlueButton, we recommend upgrading to Premium BigBlueButton or exploring alternative
-              conferencing solutions ClassOn partners with, such as Zoom, Hangouts, Teams, and other
-              video conferencing tools who are offering free or discounted services.
-  learn_more_7a8d626: Learn More
-  not_all_of_these_services_may_be_supported_by_your_155d9f70: |-
-    Not all of these services may be supported by your institution. Please contact your
-              local admin for more information.
   great_work_from_the_canvas_developers_8c23f1c3: Great work! From the ClassOn developers
   starting_import_operation_f25745f0: Starting import operation
   import_started_successfully_a3467411: Import started successfully
@@ -16054,7 +16095,7 @@ en:
   course_setup_wizard_is_showing_a7c087c1: Course Setup Wizard is showing.
   course_wizard_31c87552: Course Wizard
   my_dashboard_b724020: My dashboard
-  close_and_return_to_canvas_80544344: Close and return to Canvas
+  close_and_return_to_canvas_80544344: Close and return to ClassOn
   great_so_you_ve_got_a_course_now_what_well_before__38cfba67: Great, so you've got a course. Now what? Well, before you go publishing it to the world, you may want to check and make sure you've got the basics laid out.  Work through the list on the left to ensure that your course is ready to use.
   this_course_is_visible_only_to_teachers_until_it_i_ce972f0: This course is visible only to teachers until it is published.
   now_that_your_course_is_set_up_and_available_you_p_c0c8635c: Now that your course is set up and available, you probably won't need this checklist anymore. But we'll keep it around in case you realize later you want to try something new, or you just want a little extra help as you make changes to your course content.
@@ -16228,13 +16269,13 @@ en:
   field_cannot_be_blank_afb5b332: Field cannot be blank.
   missing_required_fields_please_fill_in_all_require_1e10b2e9: Missing required fields. Please fill in all required fields.
   public_jwk_json_is_not_valid_please_submit_properl_31ea2004: Public JWK json is not valid. Please submit properly formatted json.
+  public_jwk_url_b5564c1d: Public JWK URL
   required_values_1eb5841f: Required Values
   title_f8e03596: "* Title"
   description_61f4296: "* Description"
   target_link_uri_bbed67d1: "* Target Link URI"
   openid_connect_initiation_url_d9037d30: "* OpenID Connect Initiation Url"
   jwk_method_6d5d0c84: "* JWK Method"
-  public_jwk_url_b5564c1d: Public JWK URL
   lti_advantage_services_c1746cb4: LTI Advantage Services
   services_must_be_supported_by_the_tool_in_order_to_1f194a36: Services must be supported by the tool in order to work. Check with your Tool Vendor to ensure service capabilities.
   check_services_to_enable_8877c451: Check Services to enable
@@ -17029,7 +17070,7 @@ en:
   invite_5b1fcbcd: Invite
   ticket_successfully_submitted_f6254460: Ticket successfully submitted.
   file_a_ticket_for_a_personal_response_from_our_sup_1e1ffaff: File a ticket for a personal response from our support team.
-  for_an_instant_answer_see_if_your_issue_is_address_48280e89: For an instant answer, see if your issue is addressed in the *Canvas Guides*.
+  for_an_instant_answer_see_if_your_issue_is_address_48280e89: For an instant answer, see if your issue is addressed in the *ClassOn Guides*.
   subject_114b2e98: Subject
   include_a_link_to_a_screencast_screenshot_using_so_4b2fabcb: Include a link to a screencast/screenshot using something like *Jing*.
   how_is_this_affecting_you_b3b6a639: How is this affecting you?
@@ -17087,7 +17128,7 @@ en:
   admin_tour_36d89fbb: Admin Tour
   hello_name_cabdd4ce: Hello%{name}!
   we_know_it_s_a_priority_to_transition_your_institu_9a5bed0c: 'We know it''s a priority to transition your institution for online learning during this time. This quick tour will show you how to:'
-  add_people_and_courses_to_canvas_5c4bfff9: Add People and Courses to Canvas
+  add_people_and_courses_to_canvas_5c4bfff9: Add People and Courses to ClassOn
   quickly_share_course_content_and_templates_with_te_c70a5eeb: Quickly share Course Content and Templates with Teachers
   set_up_video_conferencing_and_other_tools_1a94a350: Set up Video Conferencing and Other Tools
   find_training_resources_and_more_help_f148612c: Find Training Resources and More Help
@@ -17101,7 +17142,7 @@ en:
   set_up_video_conferencing_c0049abe: Set up Video Conferencing
   video_conferencing_tools_enable_face_to_face_conne_144420a5: Video conferencing tools enable face-to-face connection between teachers and students.
   access_canvas_training_videos_and_courses_ea43173a: Access ClassOn training videos and courses
-  here_s_some_quick_tips_to_get_you_started_in_canva_72425979: Here's some quick tips to get you started in Canvas!
+  here_s_some_quick_tips_to_get_you_started_in_canva_72425979: Here's some quick tips to get you started in ClassOn!
   how_do_i_find_my_courses_b826e4ce: How do I find my courses?
   how_do_i_contact_my_instructor_184e35ed: How do I contact my instructor?
   how_do_i_download_the_student_app_4a4b8a63: How do I download the Student App?
@@ -17291,7 +17332,7 @@ en:
   how_do_i_use_the_pages_index_page_dafb986c: How do I use the Pages Index Page?
   how_do_i_set_a_front_page_in_a_course_a5f53cd5: How do I set a Front Page in a course?
   pages_let_you_create_interactive_content_directly__9933eb32: |-
-    Pages let you create interactive content directly in Canvas,
+    Pages let you create interactive content directly in ClassOn,
           whether it's a weekly update, a collaborative course wiki, or a
           list of educational resources. Pages can include text, multimedia,
           and links to files and other course content or pages. You can also
@@ -17388,7 +17429,7 @@ en:
   game_over_104baa: GAME OVER
   press_space_to_start_over_d4b8a2da: Press 'space' to start over
   contexttype_notification_settings_d72acd58: "%{contextType} Notification Settings"
-  enable_notifications_10a4bf44: Enable Notifications
+  enable_notifications_for_contextname_b5b4440e: Enable Notifications for %{contextName}
   you_are_currently_receiving_notifications_for_this_4f542bb2: You are currently receiving notifications for this %{contextType}. To disable %{contextType} notifications, use the toggle above.
   you_will_not_receive_any_contexttype_notifications_da7a58f1: You will not receive any %{contextType} notifications at this time. To enable %{contextType} notifications, use the toggle above.
   granular_contexttype_notification_settings_will_be_c5dfc901: Granular %{contextType} notification settings will be configurable here in the future.
@@ -17453,6 +17494,11 @@ en:
   please_wait_as_we_upload_and_process_your_file_73c4b5a8: Please wait as we upload and process your file.
   an_outcome_import_is_currently_in_progress_11e6cb38: An outcome import is currently in progress.
   it_s_ok_to_leave_this_page_we_ll_email_you_when_th_2dbed7fa: It's ok to leave this page, we'll email you when the import is done.
+  no_announcements_to_display_fbf9ed1e: No announcements to display
+  you_can_view_dismissed_announcements_by_going_to_a_7f6f4f08: |-
+    You can view dismissed announcements by going to Account and selecting Global
+                Announcements from the menu.
+  recent_f19e8c64: Recent
   count_permissions_found_1a926f7d:
     one: One permission found
     other: "%{count} permissions found"
@@ -18183,12 +18229,6 @@ en:
   error_in_mastery_paths_range_index_7d17ddac: "%{error} in mastery paths range %{index}"
   multiple_ba5220cd: Multiple
   upper_lower_56cad16c: "%{upper} - %{lower}"
-  points_bceb5005: points
-  percent_448ea947: percent
-  letter_grade_f00fedc4: letter grade
-  gpa_scale_6710e2ee: GPA scale
-  other_ddacb37d: other
-  score_pts_adcb1af3: "%{score} pts"
   select_a_course_4710371f: Select a Course
   select_a_module_optional_7edb5cb0: Select a Module (optional)
   starting_copy_operation_cc46d911: Starting copy operation
@@ -18205,7 +18245,6 @@ en:
   place_b128fa94: Place
   position_select_c2dd3980: Position Select
   yyyy_mm_dd_hh_mm_a01b6081: YYYY-MM-DD hh:mm
-  other_1c6d9c79: Other
   wiki_6603e81b: Wiki
   _5a374287: "..."
   load_more_results_460f49a9: Load more results
@@ -18537,8 +18576,9 @@ en:
   failed_to_update_domain_lookup_b2437cf7: Failed to update domain lookup
   update_name_6581781d: Update %{name}
   update_domain_account_lookup_9c89440d: Update Domain Account Lookup
-  assessment_loading_50ce6e70: Assessment Loading
   assessment_failed_to_load_ad238b36: Assessment Failed to Load
+  click_to_launch_assessment_9434b1fd: Click to Launch Assessment
+  assessment_loading_50ce6e70: Assessment Loading
   bulk_migration:
     confirm:
       delete_credential: Are you sure you want to remove these credentials?
@@ -18772,7 +18812,6 @@ en:
       update_assignment_points: Change assignment points to match rubric?
     prompts:
       update_assignment_points: Leaving the assignment's total points at %{assignmentPoints} and the rubric's total points at %{rubricPoints} will result in a maximum possible score of %{toPercentage_pointRatio} for student submissions graded with the rubric.
-  remove_all_group_observer_members_af5675f3: Remove All Group Observer Members
   remove_all_course_observer_members_4622c70d: Remove All Course Observer Members
   pick_the_date_and_time_for_the_following_conferenc_e9f91edd: 'Pick the date and time for the following conference setting:'
   content_import_files_cannot_be_downloaded_after_en_7e3a2099: Content import files cannot be downloaded after %{ENV.CONTENT_MIGRATIONS_EXPIRE_DA} days.
@@ -19003,7 +19042,7 @@ en:
     insert_update_image_view:
       image_source: Image Source
       url: URL
-      canvas: Canvas
+      canvas: ClassOn
       flickr: Flickr
       image_url_field_label: Image URL
       attributes: Attributes

@@ -20,7 +20,7 @@ require 'atom'
 require 'anonymity'
 
 class Submission < ActiveRecord::Base
-  self.ignored_columns = %w{has_admin_comment has_rubric_assessment process_attempts}
+  self.ignored_columns = %w{has_admin_comment has_rubric_assessment process_attempts context_code}
 
   include Canvas::GradeValidations
   include CustomValidations
@@ -79,12 +79,14 @@ class Submission < ActiveRecord::Base
 
   belongs_to :attachment # this refers to the screenshot of the submission if it is a url submission
   belongs_to :assignment, inverse_of: :submissions
+  belongs_to :course, inverse_of: :submissions
   belongs_to :user
   alias student user
   belongs_to :grader, :class_name => 'User'
   belongs_to :grading_period
   belongs_to :group
   belongs_to :media_object
+  belongs_to :root_account, :class_name => 'Account'
 
   belongs_to :quiz_submission, :class_name => 'Quizzes::QuizSubmission'
   has_many :all_submission_comments, -> { order(:created_at) }, class_name: 'SubmissionComment', dependent: :destroy
@@ -147,8 +149,6 @@ class Submission < ActiveRecord::Base
   scope :submitted_after, lambda { |date| where("submitted_at>?", date) }
   scope :with_point_data, -> { where("submissions.score IS NOT NULL OR submissions.grade IS NOT NULL") }
 
-  scope :for_context_codes, lambda { |context_codes| where(:context_code => context_codes) }
-
   scope :postable, -> {
     all.primary_shard.activate do
       graded.union(with_hidden_comments)
@@ -170,7 +170,7 @@ class Submission < ActiveRecord::Base
     limit(limit)
   }
 
-  scope :for_course, -> (course) { where(assignment: course.assignments.except(:order)) }
+  scope :for_course, -> (course) { where(course_id: course) }
   scope :for_assignment, -> (assignment) { where(assignment: assignment) }
 
   scope :missing, -> do
@@ -321,6 +321,7 @@ class Submission < ActiveRecord::Base
   before_save :prep_for_submitting_to_plagiarism
   before_save :check_url_changed
   before_save :check_reset_graded_anonymously
+  before_save :set_root_account_id
   after_save :touch_user
   after_save :clear_user_submissions_cache
   after_save :touch_graders
@@ -1338,8 +1339,11 @@ class Submission < ActiveRecord::Base
 
   def infer_values
     if assignment
-      self.context_code = assignment.context_code
-      self.course_id = assignment.context_id
+      if assignment.association(:context).loaded?
+        self.course = assignment.context # may as well not reload it
+      else
+        self.course_id = assignment.context_id
+      end
     end
 
     self.seconds_late_override = nil unless late_policy_status == 'late'
@@ -2277,7 +2281,7 @@ class Submission < ActiveRecord::Base
   end
 
   def context
-    self.assignment.context if self.assignment
+    self.course ||= self.assignment&.context
   end
 
   def to_atom(opts={})
@@ -2674,19 +2678,11 @@ class Submission < ActiveRecord::Base
     end
   end
 
-  def root_account_id
-    # TODO this is a substitute for the root_account_id column
-    # and the root_account attribute, which will eventually be added
-    self.assignment&.root_account_id
-  end
-
-  def root_account
-    # TODO this is a substitute for the root_account attribute,
-    # which will eventually be added
-    self.assignment&.root_account
-  end
-
   private
+
+  def set_root_account_id
+    self.root_account_id ||= assignment&.course&.root_account_id
+  end
 
   def set_anonymous_id
     self.anonymous_id = Anonymity.generate_id(existing_ids: Submission.anonymous_ids_for(assignment))

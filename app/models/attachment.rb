@@ -37,7 +37,7 @@ class Attachment < ActiveRecord::Base
   end
 
   EXCLUDED_COPY_ATTRIBUTES = %w{id root_attachment_id uuid folder_id user_id
-                                filename namespace workflow_state}
+                                filename namespace workflow_state root_account_id}
 
   include HasContentTags
   include ContextModuleItem
@@ -80,6 +80,7 @@ class Attachment < ActiveRecord::Base
   has_one :canvadoc
   belongs_to :usage_rights
 
+  before_create :set_root_account_id
   before_save :infer_display_name
   before_save :default_values
   before_save :set_need_notify
@@ -1142,6 +1143,7 @@ class Attachment < ActiveRecord::Base
   end
 
   def mime_class
+    # NOTE: keep this list in sync with what's in packages/canvas-rce/src/common/mimeClass.js
     {
       'text/html' => 'html',
       "text/x-csharp" => "code",
@@ -1166,6 +1168,8 @@ class Attachment < ActiveRecord::Base
       "image/png" => "image",
       "image/gif" => "image",
       "image/bmp" => "image",
+      "image/svg+xml" => "image",
+      # "image/webp" => "image", not supported by safari as of Version 13.1.1
       "image/vnd.microsoft.icon" => "image",
       "application/x-rar" => "zip",
       "application/x-rar-compressed" => "zip",
@@ -1182,6 +1186,8 @@ class Attachment < ActiveRecord::Base
       "audio/x-mpegurl" => "audio",
       "audio/x-pn-realaudio" => "audio",
       "audio/x-wav" => "audio",
+      "audio/mp4" => "audio",
+      "audio/webm" => "audio",
       "video/mpeg" => "video",
       "video/quicktime" => "video",
       "video/x-la-asf" => "video",
@@ -1190,6 +1196,7 @@ class Attachment < ActiveRecord::Base
       "video/x-sgi-movie" => "video",
       "video/3gpp" => "video",
       "video/mp4" => "video",
+      "video/webm": "video",
       "application/x-shockwave-flash" => "flash"
     }[content_type] || "file"
   end
@@ -2071,6 +2078,19 @@ class Attachment < ActiveRecord::Base
           end
         end
       end
+    end
+  end
+
+  def set_root_account_id
+    # needed to do it this way since root_account_id is a method in this class
+    unless read_attribute(:root_account_id)
+      self.root_account_id =
+        case self.context
+        when Account
+          self.context.resolved_root_account_id
+        else
+          self.context.root_account_id if self.context.respond_to?(:root_account_id)
+        end
     end
   end
 end

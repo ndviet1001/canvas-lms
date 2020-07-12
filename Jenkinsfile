@@ -44,6 +44,14 @@ def getPublishableTagSuffix() {
   load('build/new-jenkins/groovy/configuration.groovy').publishableTagSuffix()
 }
 
+def getRubyPassenger() {
+  load('build/new-jenkins/groovy/configuration.groovy').rubyPassenger()
+}
+
+def getPostgres() {
+  load('build/new-jenkins/groovy/configuration.groovy').postgres()
+}
+
 def runDatadogMetric(name, body) {
   def dd = load('build/new-jenkins/groovy/datadog.groovy')
   dd.runDataDogForMetric(name,body)
@@ -105,12 +113,6 @@ def isPatchsetSlackableOnFailure() {
   env.SLACK_MESSAGE_ON_FAILURE == 'true' && env.GERRIT_EVENT_TYPE == 'change-merged'
 }
 
-// WARNING! total hack, being removed after covid...
-def isCovid() {
-  env.GERRIT_BRANCH == 'covid'
-}
-// end of hack (covid)
-
 pipeline {
   agent { label 'canvas-docker' }
   options {
@@ -125,6 +127,8 @@ pipeline {
     CANVAS_LMS_IMAGE = "$DOCKER_REGISTRY_FQDN/jenkins/canvas-lms"
     BUILD_REGISTRY_FQDN = buildRegistryFQDN()
     BUILD_IMAGE = "$BUILD_REGISTRY_FQDN/jenkins/canvas-lms"
+    POSTGRES = getPostgres()
+    RUBY_PASSENGER = getRubyPassenger()
 
     // e.g. postgres-9.5-ruby-passenger-2.6
     TAG_SUFFIX = "postgres-$POSTGRES-ruby-passenger-$RUBY_PASSENGER"
@@ -166,24 +170,6 @@ pipeline {
 
               def credentials = load ('build/new-jenkins/groovy/credentials.groovy')
 
-              // WARNING! total hack, being removed after covid...
-              // if this build is triggered from a plugin that is from the
-              // covid branch, we need to checkout the covid branch for canvas-lms
-              if (isCovid() && env.GERRIT_PROJECT != 'canvas-lms') {
-                echo 'checking out canvas-lms covid branch'
-                credentials.withGerritCredentials {
-                  sh '''#!/bin/bash
-                    set -o errexit -o errtrace -o nounset -o pipefail -o xtrace
-
-                    git branch -D covid || true
-                    GIT_SSH_COMMAND='ssh -i \"$SSH_KEY_PATH\" -l \"$SSH_USERNAME\"' \
-                      git fetch origin $GERRIT_BRANCH:origin/$GERRIT_BRANCH
-                    git checkout -b covid origin/covid
-                  '''
-                }
-              }
-              // end of hack (covid)
-
               credentials.fetchFromGerrit('gerrit_builder', '.', '', 'canvas-lms/config')
               gems = readFile('gerrit_builder/canvas-lms/config/plugins_list').split()
               echo "Plugin list: ${gems}"
@@ -193,16 +179,7 @@ pipeline {
                   /* this is the commit we're testing */
                   credentials.fetchFromGerrit(gem, 'gems/plugins', null, null, env.GERRIT_REFSPEC)
                 } else {
-                  // WARNING! total hack, being removed after covid...
-                  // remove if statement when covid is done. only thing in else is needed.
-                  if (isCovid()) {
-                    echo "checkin out ${gem} covid branch"
-                    credentials.fetchFromGerrit(gem, 'gems/plugins', null, null, 'covid')
-                  }
-                  else {
-                    credentials.fetchFromGerrit(gem, 'gems/plugins')
-                  }
-                  // end of hack (covid)
+                  credentials.fetchFromGerrit(gem, 'gems/plugins')
                 }
               }
               credentials.fetchFromGerrit('qti_migration_tool', 'vendor', 'QTIMigrationTool')
@@ -304,7 +281,7 @@ pipeline {
       steps {
         script {
           def stages = [:]
-          if (env.GERRIT_EVENT_TYPE != 'change-merged' && env.GERRIT_PROJECT == 'canvas-lms' && !isCovid()) {
+          if (env.GERRIT_EVENT_TYPE != 'change-merged' && env.GERRIT_PROJECT == 'canvas-lms') {
             echo 'adding Linters'
             stages['Linters'] = {
               skipIfPreviouslySuccessful("linters") {
@@ -331,31 +308,31 @@ pipeline {
           echo 'adding Vendored Gems'
           stages['Vendored Gems'] = {
             skipIfPreviouslySuccessful("vendored-gems") {
-              wrapBuildExecution('test-suites/vendored-gems', buildParameters, true, "")
+              wrapBuildExecution('/Canvas/test-suites/vendored-gems', buildParameters, true, "")
             }
           }
 
           echo 'adding Javascript'
           stages['Javascript'] = {
             skipIfPreviouslySuccessful("javascript") {
-              wrapBuildExecution('test-suites/JS', buildParameters, true, "testReport")
+              wrapBuildExecution('/Canvas/test-suites/JS', buildParameters, true, "testReport")
             }
           }
 
           echo 'adding Contract Tests'
           stages['Contract Tests'] = {
             skipIfPreviouslySuccessful("contract-tests") {
-              wrapBuildExecution('test-suites/contract-tests', buildParameters, true, "")
+              wrapBuildExecution('/Canvas/test-suites/contract-tests', buildParameters, true, "")
             }
           }
 
-          if (env.GERRIT_EVENT_TYPE != 'change-merged' && !isCovid()) {
+          if (env.GERRIT_EVENT_TYPE != 'change-merged') {
             echo 'adding Flakey Spec Catcher'
             stages['Flakey Spec Catcher'] = {
               skipIfPreviouslySuccessful("flakey-spec-catcher") {
                 def propagate = load('build/new-jenkins/groovy/configuration.groovy').fscPropagate()
                 echo "fsc propagation: $propagate"
-                wrapBuildExecution('test-suites/flakey-spec-catcher', buildParameters, propagate, "")
+                wrapBuildExecution('/Canvas/test-suites/flakey-spec-catcher', buildParameters, propagate, "")
               }
             }
           }
@@ -364,7 +341,7 @@ pipeline {
           // // and you have no other way to test it except by running a test build.
           // stages['Test Subbuild'] = {
           //   skipIfPreviouslySuccessful("test-subbuild") {
-          //     build(job: 'test-suites/test-subbuild', parameters: buildParameters)
+          //     build(job: '/Cavnas/test-suites/test-subbuild', parameters: buildParameters)
           //   }
           // }
 
@@ -372,7 +349,7 @@ pipeline {
           // // Uncomment stage to run when developing.
           // stages['Xbrowser'] = {
           //   skipIfPreviouslySuccessful("xbrowser") {
-          //     build(job: 'test-suites/xbrowser', propagate: false, parameters: buildParameters)
+          //     build(job: '/Canvas/test-suites/xbrowser', propagate: false, parameters: buildParameters)
           //   }
           // }
 
@@ -457,6 +434,7 @@ pipeline {
       script {
         ignoreBuildNeverStartedError {
           def rspec = load 'build/new-jenkins/groovy/rspec.groovy'
+          rspec.uploadJunitReports()
           rspec.uploadSeleniumFailures()
           rspec.uploadRSpecFailures()
           load('build/new-jenkins/groovy/reports.groovy').sendFailureMessageIfPresent()

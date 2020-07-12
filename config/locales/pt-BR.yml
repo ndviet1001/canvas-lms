@@ -1048,7 +1048,7 @@ pt-BR:
       account_reports: 
         default: 
           last_user_access: 
-            text: "Este relatório mostra o último login para usuários ativos."
+            text: "Este relatório mostra o último login para usuários ativos. Observe que Último Acesso Em é atualizado uma vez a cada 10 minutos. Esse é o nosso limite atual para determinar a atividade de qualquer sessão de usuário."
     learning_outcome_assignment_type_csv_parameters: 
       account_reports: 
         samuel_merrit_university: 
@@ -2065,6 +2065,7 @@ pt-BR:
   allows_teacher_designer_ta_based_roles_to_access_t_d480279: "Permite que papéis baseados em professor/designer/assistente acessem a ferramenta de Chat."
   allows_teacher_ta_based_roles_to_access_the_attend_bf5b2a17: "Permite que papéis baseados em professor/assistente acessem a ferramenta de Frequência."
   allows_teacher_ta_based_roles_to_access_the_attend_bf92234: "Permite que funções baseadas em professor, assistente de professor acessem a ferramenta de Frequência."
+  allows_teachers_to_hide_course_sections_from_stude_eb69d87b: "Permite que os professores ocultem as seções do curso dos alunos na página Pessoas quando houver mais de uma seção no curso."
   allows_teachers_to_mark_grade_data_to_be_exported__a6bf77cf: "Permite que professores marquem dados de notas para serem exportados em massa para integrações do Sistema de Informações do Aluno."
   allows_teachers_to_specify_post_policies_for_this__a3ef829d: |-
       Permite que os professores especifiquem políticas de postagem para este curso ou tarefas específicas, permitindo que as notas sejam
@@ -4756,6 +4757,7 @@ pt-BR:
         login_expiration_minimum: "A expiração da sessão deve ser 20 minutos ou maior"
         need_integer: "Insira um número inteiro para o armazenamento em cache da lista de reprodução"
         stream_name_required: "O nome do fluxo Kinesis é necessário."
+  canvas_3962b702: Canvas
   canvas_account_id_97b0471f: canvas_account_id
   canvas_alert_anonymous_comment_assignment_title_st_e7df7956: "Alerta do Canvas - Comentário anônimo: %{assignment_title}, Aluno (%{user_id}), %{course_name}."
   canvas_alert_anonymous_comment_student_author_id_f_a525b5eb: "Alerta do Canvas - Comentário anônimo: Aluno (%{author_id}) para %{assignment_title}, Aluno (%{user_id}), %{course_name}."
@@ -7138,6 +7140,7 @@ pt-BR:
         grading_standard_enabled: "Ativar esquema de avaliação do curso"
         hide_distribution_graphs: "Esconder dos alunos gráficos de distribuição das notas"
         hide_final_grades: "Ocultar totais no resumo de notas dos alunos"
+        hide_sections_on_course_users_page: "Ocultar seções na página Pessoas dos alunos"
         home_page_announcement_limit: "Número de avisos mostrados na página inicial"
         image: Imagem
         indexed: "Incluir este curso no índice de cursos públicos"
@@ -8886,6 +8889,7 @@ pt-BR:
   enable_new_gradebook_history_page_e0fd9d02: "Habilitar página Novo Histórico do Boletim."
   enable_new_sis_integration_settings_ab6780a4: "Habilitar novas configurações de integração SIS"
   enable_notifications_10a4bf44: "Ativar notificações"
+  enable_notifications_for_contextname_b5b4440e: "Ativar notificações para %{contextName}"
   enable_or_condition_for_modules_a16f02d8: "Ativar Condição de \"OU\" para Módulos"
   enable_recording_for_this_conference_b8adff6: "Habilite gravação para esta conferência"
   enable_reregistration_for_lti_2_b2a10444: "Ativar reinscrição para LTI 2"
@@ -11596,6 +11600,7 @@ pt-BR:
   hide_correct_answers_at_2421b0aa: "Esconder Respostas Corretas em"
   hide_correct_answers_at_b1a59408: "Esconder Respostas Corretas No"
   hide_course_sections_for_course_name_bd1911af: "Ocultar seções do curso para curso %{name}"
+  hide_course_sections_from_students_b7850d64: "Ocultar seções dos cursos dos alunos"
   hide_courses_menu_1b8ca649: "Ocultar menu dos cursos"
   hide_courses_navigation_menu_6f7c4cfd: "Ocultar Menu de Navegação dos cursos"
   hide_courses_without_enrollments_6df4dfad: "Ocultar cursos sem inscrições"
@@ -11981,6 +11986,7 @@ pt-BR:
   in_order_to_complete_the_process_you_will_be_redir_83376e10: "A fim de concluir o processo, você será redirecionado para uma página de login, onde você precisará fazer login com as credenciais de seu filho."
   in_order_to_import_a_large_quantity_of_outcomes_at_c0d587e3: "Para importar uma grande quantidade de Objetivos de uma vez, ou atualizar os seus objetivos existentes, *siga o formato CSV*."
   in_product_training_walkthrough_and_tourpoints_for_2e185119: "Acompanhamento e pontos de tour do treinamento dentro do produto para professores"
+  in_product_training_walkthrough_and_tourpoints_for_35aebb17: "Passo a passo de treinamento no produto e pontos de visita para administradores, professores e alunos"
   in_progress_13b9e26f: "em andamento"
   in_progress_646a8aef: "Em andamento"
   in_progress_9d1ce8b9: "Em progresso"
@@ -12011,6 +12017,7 @@ pt-BR:
   include_unpublished_courses_7a0e7aab: "Incluir Cursos não Publicados"
   includes_a_link_to_speedgrader_in_the_assignment_h_fbe07e2c: "Inclui um link para SpeedGrader no menu do cabeçalho de tarefas no Boletim."
   includes_grade_values_in_the_admin_grade_reports_a28200da: "Inclui valores de notas nos relatórios de notas do admin."
+  includes_outcomes_service_alignments_when_exportin_6c578a35: "Inclui alinhamentos de Serviços de Resultados ao exportar e importar o conteúdo do curso"
   includes_rubrics_in_the_course_sidebar_navigation_6dd52682: "Inclui rubricas na navegação da barra lateral do curso"
   incomplete_95612d72: incompleto
   incomplete_da3c2ea2: Incompleto
@@ -15583,6 +15590,7 @@ pt-BR:
   no_74e9b590: não
   no_alignments_are_available_for_this_outcome_7f8346f9: "Nenhum alinhamento está disponível para este objetivo."
   no_announcements_280df147: "Sem avisos"
+  no_announcements_to_display_fbf9ed1e: "Nenhum anúncio para exibir"
   no_assignment_group_assigned_8f1cdb9b: "Nenhum grupo de tarefas atribuído"
   no_assignment_name_adbb215b: "Nenhum  nome de tarefa"
   no_assignments_with_that_name_found_1d7be1: "Sem tarefas com este nome encontrado"
@@ -16472,6 +16480,7 @@ pt-BR:
   outcomes_import_completed_baff5cb0: "Importação de objetivos concluída"
   outcomes_import_failed_77efcdf4: "Importação de objetivos falhou"
   outcomes_report_8887bd49: "Relatório de objetivos"
+  outcomes_service_alignment_migration_5b4391ad: "Migração de alinhamento de serviço dos resultados"
   outcomes_tutorial_tray_ebfce995: "Bandeja de Tutoriais de resultados"
   over_time_bee1a733: "ao longo do tempo"
   override_3de65b2c: Substituir
@@ -16742,6 +16751,11 @@ pt-BR:
         apps_index_endpoint: "Endpoint de índice dos aplicativos"
         base_url: "URL Base"
         token: "Token de acesso"
+    apple: 
+      description: "Fazer login com a Apple"
+    apple_settings: 
+      labels: 
+        client_id: "ID do serviço"
     assignment_freezer: 
       description: "Congelar as propriedades da tarefa na cópia"
       name: "Congelador de propriedade da tarefa"
@@ -22607,6 +22621,7 @@ pt-BR:
   this_assignment_has_been_excused_87f1dc13: "Esta tarefa foi dispensada."
   this_assignment_has_no_default_dates_ae314295: "Esta tarefa não tem datas padrão."
   this_assignment_has_no_points_possible_and_cannot__b0b4f829: "Esta tarefa não tem pontos possíveis e não pode ser incluída no cálculo de notas"
+  this_assignment_has_too_many_dates_to_display_262f555f: "Esta tarefa tem muitas datas para exibir."
   this_assignment_is_currently_being_moderated_ffd280f2: "Esta tarefa está atualmente sendo moderada"
   this_assignment_is_currently_muted_that_means_stud_94d63139: "Esta tarefa está silenciada no momento. Isso significa que os alunos não podem visualizar as suas notas e feedback. Gostaria de cancelar o silenciamento agora?"
   this_assignment_is_dropped_and_will_not_be_conside_35c3e198: "Esta tarefa foi excluída e não fará parte do cálculo total"
@@ -24723,6 +24738,9 @@ pt-BR:
   you_can_try_to_log_in_again_2b23ef0f: "Você pode tentar *fazer login de novo*."
   you_can_update_some_of_this_user_s_information_but_8e99a045: "É possível atualizar algumas informações deste usuário, mas eles podem revertê-las, se quiserem."
   you_can_use_a_single_16x16_32x32_48x48_ico_file_85da88b5: "Você pode usar um só arquivo ico 16x16, 32x32, 48x48."
+  you_can_view_dismissed_announcements_by_going_to_a_7f6f4f08: |-
+      Você pode visualizar anúncios demitidos acessando Conta e selecionando Global
+                  Anúncios no menu.
   you_can_view_your_grades_based_on_what_if_scores_s_a1aeae72: "Você pode visualizar as suas notas com base nas previsões de pontuações para que saiba quantas notas serão afetas por tarefas futuras ou reenviadas. Você pode testar pontuações para uma tarefa que já inclui uma pontuação ou uma tarefa que ainda tem de ser pontuada."
   you_cannot_assign_sections_to_a_group_discussion_t_fec73e05: "Não é possível atribuir seções para um tópico de discussão em grupo."
   you_cannot_assign_to_a_group_outside_of_the_assign_7869eb3b: "Você não pode atribuir para um grupo fora do conjunto de grupo da tarefa"
@@ -24832,6 +24850,9 @@ pt-BR:
       Você irá precisar criar um [novo aplicativo no Facebook](%{facebook_url}), e ativar o Login de OAuth do Cliente
       em configurações avançadas.  Você deve configurar %{callback_url} como o URL OAuth Válido de redirecionar.
       Depois de salvar o seu aplicativo, note a ID do Aplicativo, e Segredo do Aplicativo e insira-os aqui.
+  you_will_need_to_create_a_service_id_apple_develop_4e684a7a: |-
+      Você precisará criar um ID de serviço [Apple Developer Console](%{apple_url}).
+      Ative o login com a Apple e adicione %{callback_url} como URL de retorno. Digite o identificador aqui.
   you_will_need_to_create_a_web_application_in_the_g_43f753ec: |-
       Você precisará criar um aplicativo da web no [Google Developer Console](%{google_url}).
       Você deve adicionar %{callback_url} como um URL de redirecionamento.
