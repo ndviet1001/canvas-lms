@@ -31,7 +31,9 @@ const PastGlobalAnnouncements = () => {
       <Tabs
         margin="0 auto"
         padding="medium"
-        onRequestTabChange={(event, {index}) => {setSelectedIndex(index)}}
+        onRequestTabChange={(event, {index}) => {
+          setSelectedIndex(index)
+        }}
       >
         <Tabs.Panel
           id="currentTab"

@@ -94,7 +94,7 @@ if (
 })
 
 ready(() => {
-  (window.deferredBundles || []).forEach(loadBundle)
+  ;(window.deferredBundles || []).forEach(loadBundle)
 
   // This is in a setTimeout to have it run on the next time through the event loop
   // so that the code that actually renders the user_content runs first,

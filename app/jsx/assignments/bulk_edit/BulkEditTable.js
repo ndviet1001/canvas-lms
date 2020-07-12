@@ -206,9 +206,7 @@ export default function BulkEditTable({
     if (baseOverride) {
       return (
         <Table.Row key={`assignment_${assignment.id}`}>
-          <Table.Cell>
-            {renderAssignmentCheckbox(assignment)}
-          </Table.Cell>
+          <Table.Cell>{renderAssignmentCheckbox(assignment)}</Table.Cell>
           <Table.Cell>{renderOverrideTitle(assignment, baseOverride)}</Table.Cell>
           <Table.Cell>{renderDateInput(assignment.id, 'due_at', baseOverride)}</Table.Cell>
           <Table.Cell>{renderDateInput(assignment.id, 'unlock_at', baseOverride)}</Table.Cell>
@@ -221,9 +219,7 @@ export default function BulkEditTable({
       // Need all Table.Cells or you get weird borders on this row
       return (
         <Table.Row key={`assignment_${assignment.id}`}>
-          <Table.Cell>
-            {renderAssignmentCheckbox(assignment)}
-          </Table.Cell>
+          <Table.Cell>{renderAssignmentCheckbox(assignment)}</Table.Cell>
           <Table.Cell>{renderOverrideTitle(assignment, {base: true})}</Table.Cell>
           <Table.Cell>
             {renderNoDefaultDates(assignment.hasOwnProperty('all_dates_count'))}
