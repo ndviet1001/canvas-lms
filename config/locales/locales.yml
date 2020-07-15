@@ -1718,3 +1718,10 @@ zh-Hant:
     formats:
       tiny: "%k:%M"
       tiny_on_the_hour: "%k:%M"
+vi:
+  bigeasy_locale: vi_VN
+  dow_offset: 1
+  locales:
+    vi: Tiếng Việt
+  moment_locale: vi
+  fullcalendar_locale: vi
