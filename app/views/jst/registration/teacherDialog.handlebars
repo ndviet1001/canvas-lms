@@ -1,13 +1,13 @@
 <div class="registration-dialog">
   <form class="form-horizontal bootstrap-form" method="post" action="/users">
     <div class="control-group">
-      <label class="control-label" for="teacher_name">{{#t "labels.name"}}Name{{/t}}</label>
+      <label class="control-label" for="teacher_name">{{#t "labels.name"}}Họ tên{{/t}}</label>
       <div class="controls">
         <input type="text" id="teacher_name" name="user[name]">
       </div>
     </div>
     <div class="control-group">
-      <label class="control-label" for="teacher_email">{{#t "labels.email"}}Email{{/t}}</label>
+      <label class="control-label" for="teacher_email">{{#t "labels.email"}}Địa chỉ Email{{/t}}</label>
       <div class="controls">
         <input type="text" id="teacher_email" name="pseudonym[unique_id]">
       </div>
@@ -32,7 +32,7 @@
     <div class="control-group">
       <div class="controls">
         <input type="hidden" name="user[initial_enrollment_type]" value="teacher">
-        <button class="btn btn-primary" type="submit">{{#t "buttons.start_teaching"}}Start Teaching{{/t}}</button>
+        <button class="btn btn-primary" type="submit">{{#t "buttons.start_teaching"}}Đăng ký{{/t}}</button>
       </div>
     </div>
   </form>

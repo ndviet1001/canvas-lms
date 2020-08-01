@@ -318,7 +318,7 @@ class Account < ActiveRecord::Base
   end
 
   def product_name
-    settings[:product_name] || t("#product_name", "Canvas")
+    settings[:product_name] || t("#product_name", "ClassOn")
   end
 
   def usage_rights_required?

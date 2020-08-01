@@ -33,6 +33,7 @@
 
         <div class="ic-Login-header">
           <%= render :partial => 'login/shared/header_logo' %>
+          <!--
           <div class="ic-Login-header__links">
             <%= render "login/canvas/login_banner" %>
             <% if @domain_root_account.enable_course_catalog? %>
@@ -41,6 +42,7 @@
               </a>
             <% end %>
           </div>
+          -->
         </div>
 
         <div class="ic-Login__body">
@@ -101,6 +103,16 @@
             </div>
           <% end %>
         </div> <!-- end ic-Login__body -->
+
+        <div class="ic-Login-header__links" style="text-align: center; margin: 0 18px; padding-top: 10px; border-top: solid 1px white; border-top-style: dashed;">
+          <%= render "login/canvas/login_banner" %>
+          <% if @domain_root_account.enable_course_catalog? %>
+            <a href="/search/all_courses" class="ic-Login__link">
+              <%= t('browse_courses', 'Browse courses') %>
+            </a>
+          <% end %>
+        </div>
+
       </div> <!-- end ic-Login__innerContent  -->
       <!--
       <footer role="contentinfo" id="footer" class="ic-Login-footer">

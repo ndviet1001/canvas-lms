@@ -1,5 +1,5 @@
 ---
-en:
+vi:
   will_paginate:
     previous_label: "&#8592; Previous"
     next_label: Next &#8594;
@@ -6674,8 +6674,8 @@ en:
         show_users_for_term: Show users with enrollments in the term
       no_results_found: No Results Found
     new:
-      create_a_canvas_account: Create a ClassOn Account
-      privacy_policy: Privacy Policy
+      create_a_canvas_account: Đăng ký tài khoản
+      privacy_policy: Chính sách bảo mật
     show:
       links:
         message_user: Message %{user}
@@ -8669,7 +8669,7 @@ en:
       links:
         feedback: Tell us what you were looking for
     footer_links:
-      privacy_policy: Privacy Policy
+      privacy_policy: Chính sách bảo mật
       facebook: Facebook
       twitter: Twitter
     error_form:
@@ -12150,8 +12150,8 @@ en:
   switch_group_42e23c11: Switch Group
   parent_of_a_canvas_user_afba1624: Parent of a ClassOn User?
   click_here_for_an_account_9536cb36: Click Here For an Account
-  need_a_canvas_account_221d18ed: Need a ClassOn Account?
-  click_here_it_s_free_eeccb9cb: Click Here, It's Free!
+  need_a_canvas_account_221d18ed: Cần một tài khoản ClassOn?
+  click_here_it_s_free_eeccb9cb: Nhấn vào đây để tạo!
   forgot_password_f0c3fbac: Forgot Password?
   error_logging_in_error_msg_f61efaa3: 'Error logging in: %{error_msg}'
   create_account_263ec6: Create Account
@@ -12438,7 +12438,7 @@ en:
         course_enrollment: Enroll in %{course}
   please_enter_your_label_name_and_password_5c56be80: 'Please enter your %{label_name} and password:'
   site:
-    view_privacy_policy: View Privacy Policy
+    view_privacy_policy: Xem chính sách bảo mật
   please_enter_your_label_name_7745272d: 'Please enter your %{label_name}:'
   this_course_cannot_be_added_to_the_courses_menu_at_a3fbb11e: This course cannot be added to the courses menu at this time.
   chat_2153c6b7: Chat
@@ -14512,10 +14512,10 @@ en:
     teacher_dialog:
       agree_to_terms_and_pp: You agree to the *terms of use* and acknowledge the **privacy policy**.
       labels:
-        name: Name
-        email: Email
+        name: Họ tên
+        email: Địa chỉ Email
       buttons:
-        start_teaching: Start Teaching
+        start_teaching: Đăng ký
     incomplete_registration_warning:
       set_up_account: Your account is almost set up. To finish, please check your email at *%{email}* to set your password.
       start_participating: You can start participating now, but you must set a password before you can log back in.

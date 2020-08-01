@@ -111,8 +111,8 @@ signupDialog = (id, title, path=null) ->
   # re-disable after fixing
   if ENV.ACCOUNT.recaptcha_key
     $node.parent().find('.button_type_submit').prop('disabled', true )
-  unless ENV.ACCOUNT.terms_required # term verbiage has a link to PP, so this would be redundant
-    addPrivacyLinkToDialog($node)
+  # unless ENV.ACCOUNT.terms_required # term verbiage has a link to PP, so this would be redundant
+  #   addPrivacyLinkToDialog($node)
 
 signupDialog.templates = templates
 export default signupDialog
