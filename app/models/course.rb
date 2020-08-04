@@ -2829,6 +2829,19 @@ class Course < ActiveRecord::Base
       tabs.compact!
       tabs += default_tabs
       tabs += external_tabs
+
+      # Temporarily disable some features for instructures & students
+      tabs.delete_if {|t| t[:id] == TAB_ANNOUNCEMENTS && (user_is_instructor?(user) || user_is_student?(user)) }
+      tabs.delete_if {|t| t[:id] == TAB_ASSIGNMENTS && (user_is_instructor?(user) || user_is_student?(user)) }
+      tabs.delete_if {|t| t[:id] == TAB_DISCUSSIONS && (user_is_instructor?(user) || user_is_student?(user)) }
+      tabs.delete_if {|t| t[:id] == TAB_GRADES && (user_is_instructor?(user) || user_is_student?(user)) }
+      tabs.delete_if {|t| t[:id] == TAB_OUTCOMES && (user_is_instructor?(user) || user_is_student?(user)) }
+      tabs.delete_if {|t| t[:id] == TAB_QUIZZES && (user_is_instructor?(user) || user_is_student?(user)) }
+      tabs.delete_if {|t| t[:id] == TAB_PAGES && (user_is_instructor?(user) || user_is_student?(user)) }
+      tabs.delete_if {|t| t[:id] == TAB_MODULES && (user_is_instructor?(user) || user_is_student?(user)) }
+      tabs.delete_if {|t| t[:id] == TAB_SYLLABUS && (user_is_instructor?(user) || user_is_student?(user)) }
+      tabs.delete_if {|t| t[:id] == TAB_PEOPLE && user_is_student?(user) }
+
       # Ensure that Settings is always at the bottom
       tabs.delete_if {|t| t[:id] == TAB_SETTINGS }
       tabs << settings_tab
