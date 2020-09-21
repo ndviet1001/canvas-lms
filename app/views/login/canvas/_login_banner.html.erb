@@ -33,17 +33,6 @@
         <%= t('Click Here For an Account') %>
       </div>
     <% end %>
-  <% else %>
-    <%= link_to Setting.get("registration_link", "/register_from_website"),
-                :id => 'register_link',
-                :class => "ic-Login__link ic-Login__register-banner" do %>
-      <span class="ic-Login__banner-title">
-        <%= t("Need a Canvas Account?", "Need a ClassOn Account?") %>
-      </span>
-      <span class="ic-Login__banner-subtitle">
-        <%= t("Click Here, It's Free!") %>
-      </span>
-    <% end %>
   <% end %>
 <% end %>
 
